@@ -1,0 +1,60 @@
+ .hojaIndex {
+    background: url(imagenes/fondo.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+  }
+
+  .barraNavegacion {
+      background-color: black;
+      margin-top: 40px;
+      border:darkgray solid 2px;
+      border-radius: 5px;
+  }
+
+  .botonesBarraNavegacion {
+      display: block;
+      float:right;
+      padding: .5rem 1rem;
+      color: darkgray;
+      text-decoration: none;
+      border-right:darkgray solid 1px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+
+  .botonesBarraNavegacion:hover {
+      background-color: #F07800;
+      color: darkgray;
+  }
+
+  .ultimoBoton {
+      border-right:none;
+  }
+
+  .carousel {
+      width: 30%;
+      margin-left: 400px;
+  }
+
+  .Titulo {
+        color:darkgray;
+    }
+
+.fondo {
+    background-color: black;
+    height: 740px;
+}
+
+.presentacion {
+    padding-top: 40px;
+    padding-left: 75px;
+    padding-right: 75px;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.cuadroCancion {
+    padding:10px;
+}
