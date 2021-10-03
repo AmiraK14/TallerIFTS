@@ -125,8 +125,7 @@
     opacity: 0.9;
     border:darkgray solid 2px;
     border-radius: 5px;
-    margin-top: 550px;
-    padding-top: 15px;
+    margin-bottom: 100px;
     padding-left:30px;
 }
 
@@ -137,4 +136,9 @@
 .pestañas {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.clasePrueba {
+    background-color: black;
+    margin-top: 860px;
 }
