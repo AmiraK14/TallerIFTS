@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/home/leandro/TallerClaseIFTS/TP/imagenes/fondo.jpg);
+    background-size: 100%;
+}
+
+.registro {
+    width: 400px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: "calibri";
+    color: white;
+}
+
+.registro h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.datos-usuario {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: "calibri";
+    font-size: 18px;
+}
+
+.registro .boton-enviar {
+    width: 100%;
+    background-color: #1f53c5;
+    border: none;
+    color: white;
+    padding: 12px;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
