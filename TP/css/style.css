@@ -6,6 +6,11 @@
     height: 100vh;
   }
 
+  #nombreLogo {
+   width: 12%; 
+   margin-left: 108px
+  }
+
   #estrellaLogo {
     width: 20%;
     position: absolute;
