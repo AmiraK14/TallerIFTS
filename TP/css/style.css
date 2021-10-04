@@ -90,12 +90,28 @@
     width:auto;
 }
 
-.pestañas {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .seccionDestacados {
     background-color: black;
-    margin-top: 860px;
+    margin-top: 840px;
+    padding:20px;
+}
+
+.calesita {
+    width: 80%;
+    margin-left: 120px;
+}
+
+#flechaAnterior {
+    opacity: 1;
+    margin-left: -120px;
+}
+
+#flechaSiguiente {
+    opacity: 1;
+    margin-right: -120px;
+}
+
+.iconoFlecha {
+    height: 90px;
+    width: 80px;
 }
