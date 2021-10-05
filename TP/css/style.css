@@ -102,3 +102,16 @@
     height: 90px;
     width: 80px;
 }
+
+.barraFooter {
+    flex-grow: 0;
+    margin-right: 60px;
+}
+
+.textoBarraFooter{
+    margin-left:380px;
+}
+
+.botonesBarraFooter {
+    padding: 15px;
+}
