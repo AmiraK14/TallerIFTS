@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url(/imagenes/fondo.jpg);
-    background-size: 100%;
-}
-
 .registro {
     width: 400px;
     padding: 30px;
