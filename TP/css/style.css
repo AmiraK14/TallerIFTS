@@ -1,29 +1,31 @@
- .hojaIndex {
-    background: url(imagenes/fondo.jpg); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    height: 100vh;
-  }
+#Encabezado{
+   background-image: url(../imagenes/fondo_prueba.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-size: 100% auto;
+   height: 56.25rem;
+   position: relative;
+ }
 
   #nombreLogo {
    width: 12%; 
-   margin-left: 108px
+   margin-left: 112px
   }
 
   #estrellaLogo {
     width: 20%;
     position: absolute;
-    margin-top: -95px;
+    margin-top: -60px;
     margin-left: -69px;
     z-index: 100;
   }
 
   .barraNavegacion {
+      position:relative;
       background-color: black;
-      margin-top: 40px;
       border:darkgray solid 2px;
       border-radius: 5px;
+      top:40px;
   }
 
   .botonesBarraNavegacion {
@@ -79,8 +81,8 @@
 
 .seccionDestacados {
     background-color: black;
-    margin-top: 840px;
     padding:20px;
+    display:block;
 }
 
 .calesita {
