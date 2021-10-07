@@ -1,9 +1,8 @@
 #Encabezado{
     background-image: url(../imagenes/fondo_prueba.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    height: 56.25rem;
+    height: 65em;
     position: relative;
   }
 
@@ -81,6 +80,8 @@
 
 .seccionDestacados {
     padding:20px;
+    position:relative;
+    top:40px;
 }
 
 .calesita {
