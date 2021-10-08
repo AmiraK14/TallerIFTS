@@ -1,30 +1,32 @@
 #Encabezado{
+    size: 100% 100%;
     background-image: url(../imagenes/fondo_prueba.jpg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 65em;
-    position: relative;
+    background-size: cover;
+    position: static;
+    height: 65rem;
+    background-position: center center;
   }
 
   #nombreLogo {
    width: 12%; 
-   margin-left: 108px
+   margin-left: 108px;
   }
 
   #estrellaLogo {
     width: 20%;
     position: absolute;
-    margin-top: -95px;
-    margin-left: -69px;
     z-index: 100;
+    top: -4rem;
+    left:-4rem;
   }
 
   .barraNavegacion {
       position: relative;
       background-color: black;
-      top: 40px;
       border:darkgray solid 2px;
       border-radius: 5px;
+      top:40px;
   }
 
   .botonesBarraNavegacion {
@@ -78,10 +80,18 @@
     color: #f2f2f2;
 }
 
+.contenedorDestacados {
+    position:static;
+    top:400px;
+}
+
 .seccionDestacados {
-    padding:20px;
-    position:relative;
-    top:40px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position:static;
+    top:300px;
 }
 
 .calesita {
@@ -107,6 +117,7 @@
 .barraFooter {
     flex-grow: 0;
     margin-right: 60px;
+    position: static;
 }
 
 .textoBarraFooter{
