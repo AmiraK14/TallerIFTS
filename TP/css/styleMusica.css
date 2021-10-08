@@ -5,13 +5,11 @@
     font:bold;
 }
 
-.fondo {
-    background-color: black;
-    height: 1040px;
-}
-
-.cuadroCancion {
-    padding:10px;
+.elementosDiscos {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 *{
