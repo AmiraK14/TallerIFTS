@@ -7,7 +7,7 @@
 
 .fondo {
     background-color: black;
-    height: 740px;
+    height: 1040px;
 }
 
 .cuadroCancion {
@@ -52,4 +52,17 @@
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
+}
+
+.accordion-body {
+    background-color: black;
+}
+
+.accordion-button {
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
 }
