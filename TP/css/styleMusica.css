@@ -5,11 +5,8 @@
     font:bold;
 }
 
-.elementosDiscos {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
+.card {
+    background-color: black;
 }
 
 *{
@@ -53,11 +50,11 @@
 }
 
 .accordion-body {
-    background-color: black;
+    background-color: #141619;
 }
 
 .accordion-button {
-    background-color: black;
+    background-color:#141619;
     color: blanchedalmond;
 }
 
