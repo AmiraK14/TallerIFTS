@@ -9,6 +9,12 @@
     background-color: black;
 }
 
+.imagenCD {
+    width: 80%; 
+    margin-left: 40px;
+    padding-top: 15px;
+}
+
 *{
     margin: 0;
     padding: 0;
