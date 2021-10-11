@@ -67,3 +67,9 @@
 .accordion-button:not(.collapsed) {
     color: black;
 }
+
+.modal-header, .modal-body, .modal-footer {
+    background-color: #141619;
+    border: blanchedalmond 1px solid;
+    color: blanchedalmond;
+}
