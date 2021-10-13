@@ -10,15 +10,15 @@
 
   #nombreLogo {
    width: 20%; 
-   margin-left: 150px;
+   margin-left: 142px;
   }
 
   #estrellaLogo {
     width: 20%;
     position: absolute;
     z-index: 100;
-    margin-top: -20px;
-    margin-left: -20px;
+    margin-top: -70px;
+    margin-left: -60px;
   }
 
   .barraNavegacion {
