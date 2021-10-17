@@ -6,70 +6,46 @@
     position: static;
     height: 65rem;
     background-position: center center;
-  }
+}
 
-  #nombreLogo {
+#nombreLogo {
    width: 15%; 
    margin-left: 10%;
    position:static;
    z-index:2;
-  }
+}
 
-  #estrellaLogo {
+#estrellaLogo {
     width: 10%;
     position: absolute;
     z-index: 1;
-  }
-
-  .barraNavegacion {
-      position: relative;
-      background-color: black;
-      border:darkgray solid 2px;
-      border-radius: 5px;
-      top:7%;
-  }
-
-  .botonesBarraNavegacion {
-      display: block;
-      float:right;
-      padding: .5rem 1rem;
-      color: darkgray;
-      text-decoration: none;
-      border-right:darkgray solid 1px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-  }
-
-  .botonesBarraNavegacion:hover {
-      background-color: #F07800;
-      color: darkgray;
-  }
-
-  .ultimoBoton {
-      border-right:none;
-  }
-
-  .carousel {
-      width: 30%;
-      margin-left: 400px;
-  }
-
-  .Titulo {
-        color:darkgray;
-    }
-
-
-.fondo { /* pasarlo a la hoja de estilo de cada una de las seccion */
-    background-color: black;
-    height: 740px;
 }
 
-.presentacion { /* pasarlo a la hoja de estilo de NOSOTROS */
-    padding-top: 40px;
-    padding-left: 75px;
-    padding-right: 75px;
-    color: #f2f2f2;
-    text-align: center;
+.barraNavegacion {
+    position: relative;
+    background-color: black;
+    border:darkgray solid 2px;
+    border-radius: 5px;
+    top:7%;
+}
+
+.botonesBarraNavegacion {
+    display: block;
+    float:right;
+    padding: .5rem 1rem;
+    color: darkgray;
+    text-decoration: none;
+    border-right:darkgray solid 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botonesBarraNavegacion:hover {
+    background-color: #F07800;
+    color: darkgray;
+}
+
+.ultimoBoton {
+    border-right:none;
 }
 
 .colorFondoDropdownBoton {
@@ -94,7 +70,7 @@
     top:300px;
 }
 
-.calesita {
+.calesita { 
     width: 80%;
     margin-left: 120px;
 }
