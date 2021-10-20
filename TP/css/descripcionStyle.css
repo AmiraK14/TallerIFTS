@@ -1,3 +1,16 @@
+img {
+    width: 100%;
+}
+
+body {
+    background: url(../imagenes/fondo.jpg); 
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 170vh;
+}
+
 .Titulo {
     color:darkgray;
     padding: 20px;
@@ -51,4 +64,11 @@
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
+}
+
+#ContenedorComentario {
+    border: blanchedalmond 1px solid; 
+    background-color: black; 
+    height:50vh;
+    margin-top: 20%;
 }
