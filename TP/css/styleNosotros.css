@@ -1,11 +1,13 @@
-#Encabezado{
-    size: 100% 100%;
-    background-image: url(../imagenes/fondo_prueba.jpg);
-    background-repeat: no-repeat;
+img {
+    width: 100%;
+}
+
+body {
+    background: url(../imagenes/fondo.jpg);
     background-size: cover;
-    position: static;
-    height: 65rem;
-    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 140vh;
 }
 
 #nombreLogo { 
@@ -64,22 +66,25 @@
     width:250px;
 }
 
-.carousel { /* pasarlo a la hoja de estilo de cada una de las seccion */
+.carousel {
     width: 30%;
     margin-left: 400px;
 }
 
-.Titulo { /* pasarlo a la hoja de estilo de cada una de las seccion */
+.Titulo {
     color:darkgray;
+    padding: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font:bold;
 }
 
-.fondo { /* pasarlo a la hoja de estilo de cada una de las seccion */
+.fondo {
     background-color: black;
     height: 880px;
     margin-top:50px;
 }
 
-.presentacion { /* pasarlo a la hoja de estilo de NOSOTROS */
+.presentacion {
     padding-top: 40px;
     padding-left: 65px;
     padding-right: 65px;
@@ -87,7 +92,7 @@
     text-align: center;
 }
 
-.textoPresentacion { /* pasarlo a la hoja de estilo de NOSOTROS */
+.textoPresentacion {
     padding-top: 0px;
     padding-left: 70px;
     padding-right: 70px;
