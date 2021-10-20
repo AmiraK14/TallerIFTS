@@ -1,10 +1,21 @@
+@media only screen and (max-width: 1500px) {
+    #Encabezado {
+        height:65rem;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #Encabezado {
+        height:100rem;
+    }
+}
+
 #Encabezado{
     size: 100% 100%;
     background-image: url(../imagenes/fondo_prueba.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: static;
-    height: 65rem;
+    /*height: 65rem;*/
     background-position: center center;
 }
 
