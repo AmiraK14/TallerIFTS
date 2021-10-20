@@ -1,11 +1,19 @@
-#Encabezado{
-    size: 100% 100%;
-    background-image: url(../imagenes/fondo_prueba.jpg);
-    background-repeat: no-repeat;
+img {
+    width: 100%;
+}
+
+body {
+    background: url(../imagenes/fondo.jpg); 
+    background-color: black;
     background-size: cover;
-    position: static;
-    height: 65rem;
-    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 170vh;
+    background-position: center;
+}
+
+.colorFondoNegro {
+    background-color: black;
 }
 
 #nombreLogo { 
@@ -63,7 +71,6 @@
 .offcanvas-end {
     width:250px;
 }
-
 
 .Titulo {
     color:darkgray;
