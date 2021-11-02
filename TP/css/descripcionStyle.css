@@ -72,7 +72,7 @@ body {
     margin-top: 20%;
     padding: 20px;
 }
-+#Encabezado{
+#Encabezado{
     size: 100% 100%;
     background-image: url(../imagenes/fondo_prueba.jpg);
     background-repeat: no-repeat;
