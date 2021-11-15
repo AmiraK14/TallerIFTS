@@ -1,0 +1,24 @@
+{
+    "articulosMerchandising" : "Articulos",
+    "detalles" :[
+        {
+            "nombre" : "Remera",
+            "talle" : "XXL",                      
+            "diseño": "Original3ROUND",
+            "precio": "$1.500",
+            "metodoDePago" : "Efectivo, mercado pago, transferencia bancaria, debito y credito",
+            "cuotasConCredito" : "3 Cuotas sin interes"
+        },
+        {  
+            "nombre" : "Disco CD 3ROUND",
+            "nombreDelAlbum" : "Canciones de noche",
+            "estreno" : "14 de febrero 2018",
+            "discografica" : "Juan Perez",
+            "cantidadDeTemas" : "15"
+
+        }
+
+    ]
+
+   
+}

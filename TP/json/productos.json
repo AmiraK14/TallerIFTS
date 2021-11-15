@@ -1,0 +1,100 @@
+{
+	"CD": [
+		{
+			"idCD": "01",
+			"imagen": "imagenes/cds/02.jpg",
+			"canciones": [
+				{
+					"id": "One",
+					"titulo": "El lujo de olvidarte",
+					"spotify": "https://open.spotify.com/embed/track/4CURzNROCZDWO2TGzPZn9n?theme=0"
+				},
+				{
+					"id": "Two",
+					"titulo": "Espejo",
+					"spotify": "https://open.spotify.com/embed/track/1tRANJynEgug2crVApOmt3"
+				},
+				{
+					"id": "Three",
+					"titulo": "No te marchites",
+					"spotify": "https://open.spotify.com/embed/track/5hN4igpaNvf9neCNxVavKt"
+				},
+				{
+					"id": "Four",
+					"titulo": "Una Venus",
+					"spotify": "https://open.spotify.com/embed/track/5732ZGFV3VB7s2cS1H234G?theme=0"
+				},
+				{
+					"id": "Five",
+					"titulo": "Tu Crimen Perfecto",
+					"spotify": "https://open.spotify.com/embed/track/3kKVPMERgPbfPuh8kKwHBe?theme=0"
+				}
+			]
+		},
+		{
+			"cd": "02",
+			"imagen": "imagenes/cds/01.jpg",
+			"canciones": [{
+					"id": "One",
+					"titulo": "De un Cielo Gris",
+					"spotify": "https://open.spotify.com/embed/track/7ICTu195WzaRJbxnnSaO1n"
+				},
+				{
+					"id": "Two",
+					"titulo": "Vuelvo a Caer",
+					"spotify": "https://open.spotify.com/embed/track/12hqlBYbaKI7E7cgkJjyMv"
+				},
+				{
+					"id": "Three",
+					"titulo": "El Bohemio",
+					"spotify": "https://open.spotify.com/embed/track/0nW3MNvhIomUK54SGwy3jL"
+				},
+				{
+					"id": "Four",
+					"titulo": "Noches con Lluvia",
+					"spotify": "https://open.spotify.com/embed/track/66s898eSgtjN2sNqY2cSVx"
+				},
+				{
+					"id": "Five",
+					"titulo": "Podría",
+					"spotify": "https://open.spotify.com/embed/track/2MPPWIDUJUWOYNbZgSkYc7"
+				},
+				{
+					"id": "Six",
+					"titulo": "Sirena",
+					"spotify": "https://open.spotify.com/embed/track/7ght5ZSV9vcSezcDeIHgkC"
+				},
+				{
+					"id": "Seven",
+					"titulo": "Soñar",
+					"spotify": "https://open.spotify.com/embed/track/3UCxQv7VeiKMepxcKZq8qR"
+				},
+				{
+					"id": "Eight",
+					"titulo": "Te Veo Ahí",
+					"spotify": "https://open.spotify.com/embed/track/30ja0fXDPWSW88VdgbOQ4g"
+				},
+				{
+					"id": "Nine",
+					"titulo": "Tengo la Sensación",
+					"spotify": "https://open.spotify.com/embed/track/1uxLT1S2yYLLRii27N74gc"
+				},
+				{
+					"id": "Ten",
+					"titulo": "Fuguémonos",
+					"spotify": "https://open.spotify.com/embed/track/0P5glI7ljZ3w05pQCNzsDQ"
+				}
+			]
+		}
+	],
+
+	"Shows": [
+		{
+			"imgFlyer":	"",
+			"lugar": "",
+			"fecha": "",
+			"vigente": ""
+
+		}
+	]
+}
