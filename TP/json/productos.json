@@ -90,11 +90,40 @@
 
 	"Shows": [
 		{
-			"imgFlyer":	"",
-			"lugar": "",
-			"fecha": "",
-			"vigente": ""
-
+			"imgFlyer": "imagenes/flyershow/01.jpg",
+			"fecha": "FEB 09",
+			"lugar": "Quilmes, BA",
+			"vigente": true
+		},
+		{
+			"imgFlyer": "imagenes/flyershow/02.jpg",
+			"fecha": "DIC 21",
+			"lugar": "Club Ferrocarril Oeste, CABA",
+			"vigente": true
+		},
+		{
+			"imgFlyer": "imagenes/flyershow/03.jpg",
+			"fecha": "OCT 11",
+			"lugar": "Muñiz, BA",
+			"vigente": false
+		},
+		{
+			"imgFlyer": "imagenes/flyershow/04.jpg",
+			"fecha": "AGO 08",
+			"lugar": "Emergente Bar, CABA",
+			"vigente": false
+		},
+		{
+			"imgFlyer": "imagenes/flyershow/05.jpg",
+			"fecha": "JUL 21",
+			"lugar": "Club Ferrocarril Oeste, CABA",
+			"vigente": false
+		},
+		{
+			"imgFlyer": "imagenes/flyershow/06.jpg",
+			"fecha": "Jun 08",
+			"lugar": "Club Ferrocarril Oeste, CABA",
+			"vigente": false
 		}
 	]
 }
