@@ -1,24 +1,58 @@
 {
     "articulosMerchandising" : "Articulos",
-    "detalles" :[
+    "Remera" :[
         {
             "nombre" : "Remera",
+            "imgRemera" : "imagenes/merch/imagenremera3round.jpg",
             "talle" : "XXL",                      
             "diseño": "Original3ROUND",
-            "precio": "$1.500",
-            "metodoDePago" : "Efectivo, mercado pago, transferencia bancaria, debito y credito",
-            "cuotasConCredito" : "3 Cuotas sin interes"
-        },
+            "precio": "$1.500"           
+        }
+    ],
+   
+    "CD" :[
         {  
             "nombre" : "Disco CD 3ROUND",
+            "imgCD3round" : "imagenes/merch/imagenCD3round.jpg",
             "nombreDelAlbum" : "Canciones de noche",
             "estreno" : "14 de febrero 2018",
             "discografica" : "Juan Perez",
-            "cantidadDeTemas" : "15"
-
+            "cantidadDeTemas" : "15",
+            "precio" : "$1.500"
         }
-
+    ],
+ 
+    "Tazas" :[
+        { 
+            "nombre" : "Taza 1",
+            "imgTaza1" : "imagenes/merch/taza3ROUND.jpg",
+            "diseño" : "Tazanegra3round",
+            "precio" : "$1.500"  
+         },
+         {
+             "nombre" : "Taza 2",
+             "imgTaza2" : "imagenes/merch/tazaDistintoModelo3ROUND.jpg",
+             "diseño" : "TazanegraEstrellaLogo",
+             "precio" : "$1.500"
+             
+         }
+    ],
+    
+    "Vaso" : [
+        {
+            "nombre" : "VasoCervezero",
+            "imgPua" : "imagenes/merch/pua3ROUND.jpg",
+            "diseño" : "vasonegro3ROUND",
+            "precio" : "$1.500"
+       }      
+    ],
+    
+    "Pua" : [
+        {
+            "nombre" : "Pua",
+            "imgVaso" : "imagenes/merch/vasoCervecero3ROUND.jpg",
+            "diseño" : "Original3ROUND",
+            "precio" : "$1.500"
+        }
     ]
-
-   
 }
