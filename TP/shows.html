@@ -11,166 +11,37 @@
     <link rel="shortcut icon" href="imagenes/logo_icon.png">
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <div class="row">
-        <a class="navbar-brand" href="index.html">
-        <img src="imagenes/logo_estrella.png" id="estrellaLogo" class= "d-none d-lg-block">
-        <img src="imagenes/logo_nombrebanda.png" id="nombreLogo">
-        </a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="musica.html" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Nuestra música
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                <li><a class="dropdown-item" href="musica.html">En línea</a></li>
-                <li><a class="dropdown-item" href="shows.html">En vivo</a></li>
-                <li><a class="dropdown-item" href="merchandising.html">En merchandising</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="formulario.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <div style="margin-top: 40px;">
+  <header id="headerSecciones"></header>
+  <section>
+    <div style="margin-top: 40px;">
     <div class="container-fluid colorFondoNegro">
-      <header>
+      <div id= "EncabezadoTitulo">
         <div class="container">
             <h1 class="Titulo colorFondoNegro">NUESTRA MUSICA</h1>
         </div>
-        <div class="container colorFondoNegro">
+        <div id= "sectorBarraNavegacion" class="container colorFondoNegro">
           <ul class="nav nav-tabs">
             <li class="nav-item">
               <a class="nav-link" href="musica.html">En linea</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="shows.html">En vivo</a>
+              <a class="nav-link active" aria-current="page" href="shows.html">En vivo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="merchandising.html">En merchandising</a>
+              <a class="nav-link" href="merchandising.html">En merchandising</a>
             </li>
           </ul>
         </div>
-      </header>
-    </div>
-    <main>
-      <div class="container">
-        <div id="primeraFila" class="row">
-          <div class="col-xl-4 col-lg-12">
-            <div class="card text-white mb-3 text-center">
-              <img src="imagenes/flyersshow/01.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">FEB 09 - Quilmes, BA</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button>
-                  </div>
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-12">
-            <div class="card text-white mb-3 text-center">
-              <img src="imagenes/flyersshow/02.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">DIC 21 - Club Ferrocarril Oeste, CABA</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button>
-                  </div>
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-12">
-            <div class="card text-white mb-3 text-center">
-              <img src="imagenes/flyersshow/03.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">OCT 11 - Muñiz, BA</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button>
-                  </div>
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="segundaFila" class="row">
-          <div class="col-xl-4 col-lg-12">
-            <div class="card text-white mb-3 text-center">
-              <img src="imagenes/flyersshow/04.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">AGO 08 - Emergente Bar, CABA</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button>
-                  </div>
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-12">
-            <div class="card text-white mb-3 text-center">
-              <img src="imagenes/flyersshow/05.png" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">JUL 21 - Club Ferrocarril Oeste, CABA</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button>
-                  </div>
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-12">
-            <div class="card text-white mb-3 text-center">
-              <img src="imagenes/flyersshow/06.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">JUN 08 - Club Ferrocarril Oeste, CABA</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button>
-                  </div>
-                  <div class="col-6">
-                    <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </main>
+    </div>
+  </section>
+  <section class="container">
+    <div id="contenedorCards" class="row">
+    </div>
+  </section>
+
+
+    <!--MODALS-->
     <div class="modal fade" id="exampleModalComentario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -203,11 +74,11 @@
               </div>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Tu mail:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" id="formComentarioMail">
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Tu comentario:</label>
-                <textarea class="form-control" id="message-text"></textarea>
+                <textarea class="form-control" id="formComentarioComentario"></textarea>
               </div>
             </form>
           </div>
@@ -230,16 +101,16 @@
               <div class="mb-3">
                 <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                    <input id="formCompraNombre" type="text" class="form-control" placeholder="Nombre" aria-label="First name">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                    <input id="formCompraApellido" type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
                   </div>
                 </div>
                 <label for="recipient-name" class="col-form-label">Tu mail:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" id="formCompraMail">
               </div>
-              <select class="form-select" size="6" aria-label="size 6 select example">
+              <select id="formCompraCantidad" class="form-select" size="6" aria-label="size 6 select example">
                 <option selected>Selecciona la cantidad de tickets</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -252,12 +123,15 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Enviar</button>
+            <button type="button" class="btn btn-primary" onclick="validarFormularioCompra()">Enviar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="js/showsScript.js"></script>
 </body>
 </html>
