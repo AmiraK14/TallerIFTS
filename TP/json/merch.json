@@ -1,16 +1,13 @@
 {
-    "articulosMerchandising" : "Articulos",
-    "Remera" :[
+    "articulosMerchandising" : [
+    
         {
             "nombre" : "Remera",
             "imgRemera" : "imagenes/merch/imagenremera3round.jpg",
             "talle" : "XXL",                      
             "diseño": "Original3ROUND",
             "precio": "$1.500"           
-        }
-    ],
-   
-    "CD" :[
+        },   
         {  
             "nombre" : "Disco CD 3ROUND",
             "imgCD3round" : "imagenes/merch/imagenCD3round.jpg",
@@ -19,7 +16,19 @@
             "discografica" : "Juan Perez",
             "cantidadDeTemas" : "15",
             "precio" : "$1.500"
-        }
+        },
+        {
+            "nombre" : "VasoCervezero",
+            "imgPua" : "imagenes/merch/pua3ROUND.jpg",
+            "diseño" : "vasonegro3ROUND",
+            "precio" : "$1.500"
+       },
+       {
+        "nombre" : "Pua",
+        "imgVaso" : "imagenes/merch/vasoCervecero3ROUND.jpg",
+        "diseño" : "Original3ROUND",
+        "precio" : "$1.500"
+    }
     ],
  
     "Tazas" :[
@@ -36,23 +45,5 @@
              "precio" : "$1.500"
              
          }
-    ],
-    
-    "Vaso" : [
-        {
-            "nombre" : "VasoCervezero",
-            "imgPua" : "imagenes/merch/pua3ROUND.jpg",
-            "diseño" : "vasonegro3ROUND",
-            "precio" : "$1.500"
-       }      
-    ],
-    
-    "Pua" : [
-        {
-            "nombre" : "Pua",
-            "imgVaso" : "imagenes/merch/vasoCervecero3ROUND.jpg",
-            "diseño" : "Original3ROUND",
-            "precio" : "$1.500"
-        }
-    ]
+    ]       
 }
