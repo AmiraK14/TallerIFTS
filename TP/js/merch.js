@@ -3,10 +3,10 @@ const request = new XMLHttpRequest;
 request.open('GET', url);
 request.responseType = 'json';
 request.send();
-productos3Round = '';
+productosTresRound = '';
 
 request.onload = function(){
-    productos3Round = request.response;
-    console.log(productos3Round);
+    productosTresRound = request.response;
+    console.log(productosTresRound);
 }
 
