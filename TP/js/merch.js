@@ -10,3 +10,14 @@ request.onload = function(){
     console.log(productosTresRound);
 }
 
+function productosAz (){
+
+}
+
+function productosZa(){
+
+}
+
+function productosDestacados(){
+    
+}
