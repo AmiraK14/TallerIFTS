@@ -1,8 +1,12 @@
-console.log(Hola mundo!);
-
-const url = 'merch.json';
-const Request = new XMLHttpRequest();
-request.open('GET',url);
+const url = 'json/productos.json';
+const request = new XMLHttpRequest;
+request.open('GET', url);
 request.responseType = 'json';
 request.send();
-var articulo
+productos3Round = '';
+
+request.onload = function(){
+    productos3Round = request.response;
+    console.log(productos3Round);
+}
+
