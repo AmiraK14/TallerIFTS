@@ -1,4 +1,4 @@
-const requestURL = 'json/productos.json';
+const requestURL = 'json/musica.json'; // temporal, hasta que pasemos los shows al json poductos
 const request = new XMLHttpRequest;
 request.open ('GET', requestURL);
 request.responseType = 'json';
