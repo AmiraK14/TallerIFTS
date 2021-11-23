@@ -1,11 +1,12 @@
 {
-    "articulosMerchandising" : [
+     "articulosMerchandising" : [
         {
             "nombre" : "Remera",
             "imgRemera" : "imagenes/merch/imagenremera3round.jpg",
             "talle" : "XXL",                      
             "diseño": "Original3ROUND",
-            "precio": "$1.500"           
+            "precio": "$1.500",
+            "destacado" : false
         },   
         {  
             "nombre" : "Disco CD 3ROUND",
@@ -14,35 +15,82 @@
             "estreno" : "14 de febrero 2018",
             "discografica" : "Juan Perez",
             "cantidadDeTemas" : "15",
-            "precio" : "$1.500"
+            "precio" : "$1.500",
+            "destacado" : false
         },
         {
             "nombre" : "VasoCervezero",
             "imgPua" : "imagenes/merch/pua3ROUND.jpg",
             "diseño" : "vasonegro3ROUND",
-            "precio" : "$1.500"
+            "precio" : "$1.500",
+            "destacado" : false
        },
        {
-        "nombre" : "Pua",
-        "imgVaso" : "imagenes/merch/vasoCervecero3ROUND.jpg",
-        "diseño" : "Original3ROUND",
-        "precio" : "$1.500"
+            "nombre" : "Pua",
+            "imgVaso" : "imagenes/merch/vasoCervecero3ROUND.jpg",
+            "diseño" : "Original3ROUND",
+            "precio" : "$1.500",
+            "destacado" : false
        }
     ],
- 
     "tazas" : [
         { 
             "nombre" : "Taza 1",
             "imgTaza1" : "imagenes/merch/taza3ROUND.jpg",
             "diseño" : "Tazanegra3round",
-            "precio" : "$1.500"  
+            "precio" : "$1.500", 
+            "destacado" : false
          },
          {
              "nombre" : "Taza 2",
              "imgTaza2" : "imagenes/merch/tazaDistintoModelo3ROUND.jpg",
              "diseño" : "TazanegraEstrellaLogo",
-             "precio" : "$1.500"
-             
-         }
-    ]       
+             "precio" : "$1.500",
+             "destacado" : false
+        }
+    ],      
+    "Shows": [
+		{
+			"imgFlyer": "imagenes/flyersshow/01.jpg",
+			"fecha": "FEB 09",
+			"lugar": "Quilmes, BA",
+			"vigente": true,
+			"localidad": "BA"
+		},
+		{
+			"imgFlyer": "imagenes/flyersshow/02.jpg",
+			"fecha": "DIC 21",
+			"lugar": "Club Ferrocarril Oeste, CABA",
+			"vigente": true,
+			"localidad": "CABA"
+		},
+		{
+			"imgFlyer": "imagenes/flyersshow/03.jpg",
+			"fecha": "OCT 11",
+			"lugar": "Muñiz, BA",
+			"vigente": false,
+			"localidad": "BA"
+		},
+		{
+			"imgFlyer": "imagenes/flyersshow/04.jpg",
+			"fecha": "AGO 08",
+			"lugar": "Emergente Bar, CABA",
+			"vigente": false,
+			"localidad": "CABA"
+		},
+		{
+			"imgFlyer": "imagenes/flyersshow/05.png",
+			"fecha": "JUL 21",
+			"lugar": "Club Ferrocarril Oeste, CABA",
+			"vigente": false,
+			"localidad": "CABA"
+		},
+		{
+			"imgFlyer": "imagenes/flyersshow/06.jpg",
+			"fecha": "Jun 08",
+			"lugar": "Club Ferrocarril Oeste, CABA",
+			"vigente": false,
+			"localidad": "CABA"
+		}
+	]
 }
