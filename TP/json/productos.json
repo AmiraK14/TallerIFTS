@@ -30,7 +30,7 @@
        }
     ],
  
-    "Tazas" :[
+    "tazas" : [
         { 
             "nombre" : "Taza 1",
             "imgTaza1" : "imagenes/merch/taza3ROUND.jpg",
