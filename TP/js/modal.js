@@ -1,1 +1,0 @@
-alert("esta seguro de enviar todos los datos ?");
