@@ -8,6 +8,7 @@ request.onload = function() {
     productos3Round = request.response;
     console.log(productos3Round);
     agregarNavbar();
+    agregarBarraSecciones();
     agregarCards();
     deshabilitarBotones()
 }
@@ -39,6 +40,20 @@ function agregarNavbar(){
     miNavBar += '</ul></div></div></div></nav>'
             
     $('#headerSecciones').append(miNavBar);
+}
+
+function agregarBarraSecciones(){
+    var BarraSecciones = '<ul class="nav nav-tabs">';
+    BarraSecciones += '<li class="nav-item">';
+    BarraSecciones += '<a class="nav-link" href="musica.html">En linea</a>';
+    BarraSecciones += '</li>';
+    BarraSecciones += '<li class="nav-item">';
+    BarraSecciones += '<a class="nav-link active" aria-current="page" href="shows.html">En vivo</a>';
+    BarraSecciones += '</li>';
+    BarraSecciones += '<li class="nav-item">';
+    BarraSecciones += '<a class="nav-link" href="merchandising.html">En merchandising</a></li></ul>';
+    
+    $('#sectorBarraNavegacion').append(BarraSecciones);
 }
 
 function agregarCards(){
