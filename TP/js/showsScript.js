@@ -9,8 +9,8 @@ request.onload = function() {
     console.log(productos3Round);
     agregarNavbar();
     agregarBarraSecciones();
-    agregarCards();
-    deshabilitarBotones()
+    //agregarCards();
+    //deshabilitarBotones()
 }
 
 
@@ -57,6 +57,7 @@ function agregarBarraSecciones(){
 }
 
 function agregarCards(){
+    $('#contenedorCards').empty();
     shows = productos3Round.Shows;
     for (i=0;i<shows.length;i++){
         miCard = '<div class="col-xl-4 col-lg-12">';
@@ -74,6 +75,63 @@ function agregarCards(){
         idBotonTickets = "#botonTickets"+shows[i].id
         idBotonOpinion = "#botonOpinion"+shows[i].id
         $('#contenedorCards').append(miCard);
+    }
+    $('#contenedorCards').ready(function(){
+        deshabilitarBotones();
+    })
+}
+
+function agregarCardsPorLocalidad(localidad){
+    $('#contenedorCards').empty();
+    shows = productos3Round.Shows;
+    for (i=0;i<shows.length;i++){
+        miCard = '<div class="col-xl-4 col-lg-12">';
+        miCard += '<div class="card text-white mb-3 text-center">'
+        miCard += '<img src="'+shows[i].imgFlyer+'" class="card-img-top">'
+        miCard += '<div class="card-body">'
+        miCard += '<h5 class="card-title">'+shows[i].fecha+'</h5>'
+        miCard += '<h6 class="card-title">'+shows[i].lugar+'</h6>'
+        miCard += '<div class="row">'
+        miCard += '<div class="col-6">'
+        miCard += '<button id="botonTickets'+shows[i].id+'" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button></div>'
+        miCard += '<div class="col-6">'  
+        miCard += '<button id="botonOpinion'+shows[i].id+'" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>'
+        miCard += '</div></div></div></div></div>'  
+        idBotonTickets = "#botonTickets"+shows[i].id
+        idBotonOpinion = "#botonOpinion"+shows[i].id
+        if (shows[i].localidad == localidad){
+            $('#contenedorCards').append(miCard);
+        }
+    }
+    $('#contenedorCards').ready(function(){
+        deshabilitarBotones();
+    })
+}
+
+function agregarCardsPorFecha(vigencia){
+    $('#contenedorCards').empty();
+    shows = productos3Round.Shows;
+    for (i=0;i<shows.length;i++){
+        miCard = '<div class="col-xl-4 col-lg-12">';
+        miCard += '<div class="card text-white mb-3 text-center">'
+        miCard += '<img src="'+shows[i].imgFlyer+'" class="card-img-top">'
+        miCard += '<div class="card-body">'
+        miCard += '<h5 class="card-title">'+shows[i].fecha+'</h5>'
+        miCard += '<h6 class="card-title">'+shows[i].lugar+'</h6>'
+        miCard += '<div class="row">'
+        miCard += '<div class="col-6">'
+        miCard += '<button id="botonTickets'+shows[i].id+'" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button></div>'
+        miCard += '<div class="col-6">'  
+        miCard += '<button id="botonOpinion'+shows[i].id+'" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>'
+        miCard += '</div></div></div></div></div>'  
+        idBotonTickets = "#botonTickets"+shows[i].id
+        idBotonOpinion = "#botonOpinion"+shows[i].id
+        if (shows[i].vigente == vigencia){
+            $('#contenedorCards').append(miCard);
+        }
+        $('#contenedorCards').ready(function(){
+            deshabilitarBotones();
+        })
     }
 }
 
