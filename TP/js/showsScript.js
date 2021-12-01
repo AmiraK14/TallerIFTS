@@ -14,7 +14,7 @@ request.onload = function() {
 }
 
 
-function agregarNavbar(){
+/*function agregarNavbar(){
     var miNavBar = '<nav class="navbar navbar-dark bg-dark fixed-top">';
     miNavBar += '<nav class="navbar navbar-dark bg-dark fixed-top">';
     miNavBar += '<nav class="navbar navbar-dark bg-dark fixed-top">';
@@ -54,7 +54,7 @@ function agregarBarraSecciones(){
     BarraSecciones += '<a class="nav-link" href="merchandising.html">En merchandising</a></li></ul>';
     
     $('#sectorBarraNavegacion').append(BarraSecciones);
-}
+}*/
 
 function agregarCards(){
     $('#contenedorCards').empty();
