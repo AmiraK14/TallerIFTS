@@ -52,16 +52,25 @@ function agregarNavbar(){
     $('#headerSecciones').append(miNavBar);
 }
 
-function agregarBarraSecciones(){
+function agregarBarraSecciones(seccion){
     var BarraSecciones = '<ul class="nav nav-tabs">';
     BarraSecciones += '<li class="nav-item">';
-    BarraSecciones += '<a class="nav-link" href="musica.html">En linea</a>';
+    BarraSecciones += '<a id="enLinea" class="nav-link" href="musica.html">En linea</a>';
     BarraSecciones += '</li>';
     BarraSecciones += '<li class="nav-item">';
-    BarraSecciones += '<a class="nav-link active" aria-current="page" href="shows.html">En vivo</a>';
+    BarraSecciones += '<a id="enVivo" class="nav-link" aria-current="page" href="shows.html">En vivo</a>';
     BarraSecciones += '</li>';
     BarraSecciones += '<li class="nav-item">';
-    BarraSecciones += '<a class="nav-link" href="merchandising.html">En merchandising</a></li></ul>';
-    
+    BarraSecciones += '<a id="enMerch" class="nav-link" href="merchandising.html">En merchandising</a></li></ul>';
     $('#sectorBarraNavegacion').append(BarraSecciones);
+
+    $('#sectorBarraNavegacion').ready(function(){
+        if (seccion == 'linea'){
+            $('#enLinea').prop('class','nav-link active');
+        } else if (seccion == 'vivo') {
+            $('#enVivo').prop('class','nav-link active');
+        } else if (seccion == 'merch') {
+            $('#enMerch').prop('class','nav-link active');
+        }
+    })
 }
