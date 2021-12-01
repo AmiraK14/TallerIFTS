@@ -8,10 +8,8 @@ request.onload = function() {
     productos3Round = request.response;
     console.log(productos3Round);
     agregarNavbar();
-    agregarBarraSecciones();
+    agregarBarraSecciones('linea');
 }
-
-
 
 
 function agregarElementosAccordeon(numeroCD){
