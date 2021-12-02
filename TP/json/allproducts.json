@@ -1,0 +1,77 @@
+{
+    "allProducts":
+    [
+        {
+            "id":"merch01",
+            "img":"imagenes/merch/imagenremera3round.jpg",
+            "seccion":"merchandising.html",
+            "destacado": false
+        },
+        {
+            "id":"merch02",
+            "img":"imagenes/merch/imagenCD3round.jpg",
+            "seccion":"merchandising.html",
+            "destacado": true
+        },
+        {
+            "id":"merch03",
+            "img":"imagenes/merch/pua3ROUND.jpg",
+            "seccion":"merchandising.html",
+            "destacado": true
+        },
+        {
+            "id":"merch04",
+            "img":"imagenes/merch/vasoCervecero3ROUND.jpg",
+            "seccion":"merchandising.html",
+            "destacado": false
+        },
+        {
+            "id":"merch05",
+            "img":"imagenes/merch/taza3ROUND.jpg",
+            "seccion":"merchandising.html",
+            "destacado": true
+        },
+        {
+            "id":"merch06",
+            "img":"imagenes/merch/tazaDistintoModelo3ROUND.jpg",
+            "seccion":"merchandising.html",
+            "destacado": false
+        },
+        {
+            "id":"show01",
+            "img":"imagenes/flyersshow/01.jpg",
+            "seccion":"shows.html",
+            "destacado": false
+        },
+        {
+            "id":"show02",
+            "img":"imagenes/flyersshow/02.jpg",
+            "seccion":"shows.html",
+            "destacado": true
+        },
+        {
+            "id":"show03",
+            "img":"imagenes/flyersshow/03.jpg",
+            "seccion":"shows.html",
+            "destacado": false
+        },
+        {
+            "id":"show04",
+            "img":"imagenes/flyersshow/04.jpg",
+            "seccion":"shows.html",
+            "destacado": true
+        },
+        {
+            "id":"show05",
+            "img":"imagenes/flyersshow/05.png",
+            "seccion":"shows.html",
+            "destacado": false
+        },
+        {
+            "id":"show06",
+            "img":"imagenes/flyersshow/06.jpg",
+            "seccion":"shows.html",
+            "destacado": true
+        }
+    ]
+}
