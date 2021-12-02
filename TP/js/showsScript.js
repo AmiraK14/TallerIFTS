@@ -10,6 +10,7 @@ request.onload = function() {
     agregarNavbar();
     agregarBarraSecciones('vivo');
     crearRankStars();
+    agregarCards();
 }
 
 function agregarCards(){
@@ -124,9 +125,16 @@ function validarFormularioCompra(){
 }
 
 function validarFormularioComentario(){
+    star5 = $('#star5').prop('checked');
+    star4 = $('#star4').prop('checked');
+    star3 = $('#star3').prop('checked');
+    star2 = $('#star2').prop('checked');
+    star1 = $('#star1').prop('checked');
     mail = $('#formComentarioMail').val();
     comentario = $('#formComentarioComentario').val();
-    if (mail == '') {
+    if (star1 == false && star2 == false && star3 == false && star4 == false && star5 == false){
+        alert("Ingrese una puntuacion");
+    } else if (mail == '') {
         alert("Debe completar el campo mail");
     } else if (comentario == '') {
         alert("Deje su comentario para continuar");
