@@ -9,6 +9,7 @@ request.onload = function() {
     console.log(productos3Round);
     agregarNavbar();
     agregarBarraSecciones('linea');
+    crearRankStars();
 }
 
 
