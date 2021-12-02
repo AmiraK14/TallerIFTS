@@ -9,6 +9,7 @@ request.onload = function() {
     console.log(productos3Round);
     agregarNavbar();
     agregarBarraSecciones('vivo');
+    crearRankStars();
 }
 
 function agregarCards(){
@@ -119,5 +120,17 @@ function validarFormularioCompra(){
         alert("Debe seleccionar la cantidad de tickets que desea adquirir")
     } else {
         alert(nombre.value+' '+apellido.value+'\n'+mail.value+"\n"+"Vas a comprar la cantidad de "+cantidadTickets.value+' tickets\nRESERVA EXITOSA');
+    }
+}
+
+function validarFormularioComentario(){
+    mail = $('#formComentarioMail').val();
+    comentario = $('#formComentarioComentario').val();
+    if (mail == '') {
+        alert("Debe completar el campo mail");
+    } else if (comentario == '') {
+        alert("Deje su comentario para continuar");
+    } else {
+        alert(mail+' su comentario ha sido enviado con exito');
     }
 }
