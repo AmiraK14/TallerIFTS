@@ -76,29 +76,9 @@
     padding-left:15px;
     padding-right:15px;
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
     position:static;
     top:300px;
-}
-
-.calesita { 
-    width: 80%;
-    margin-left: 10%;
-}
-
-#flechaAnterior {
-    opacity: 1;
-    margin-left: -120px;
-}
-
-#flechaSiguiente {
-    opacity: 1;
-    margin-right: -120px;
-}
-
-.iconoFlecha {
-    height: 90px;
-    width: 80px;
 }
 
 .barraFooter {
