@@ -21,23 +21,38 @@
         </div>
         <div id= "sectorBarraNavegacion" class="container colorFondoNegro"></div>
         <div id= "botonesCategorias">
-          <div class="container gap-5 d-block my-2 mx-auto d-flex justify-content-center">
-
+          <div class="container gap-5 d-block my-2 pb-2 mx-auto d-flex justify-content-center">
             <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Por Localidad
             </button>
             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" onclick="agregarCardsPorLocalidad('CABA')">CABA</a></li>
-              <li><a class="dropdown-item" onclick="agregarCardsPorLocalidad('BA')">Gran Buenos Aires</a></li>
+              <li><a class="dropdown-item" onclick="agregarCards('localidad','CABA')">CABA</a></li>
+              <li><a class="dropdown-item" onclick="agregarCards('localidad','BA')">Gran Buenos Aires</a></li>
             </ul>
             <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Por Fecha
             </button>
             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" onclick="agregarCardsPorFecha(true)">Shows vigentes</a></li>
-              <li><a class="dropdown-item"  onclick="agregarCardsPorFecha(false)">Shows anteriores</a></li>
+              <li><a class="dropdown-item" onclick="agregarCards('vigencia',true)">Shows vigentes</a></li>
+              <li><a class="dropdown-item"  onclick="agregarCards('vigencia',false)">Shows anteriores</a></li>
             </ul>
-            <button class="btn btn-primary" type="button" onclick="agregarCards()">Todos</button>
+            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Por Precio
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <li><a class="dropdown-item" onclick="agregarCards('gratuidad',true)">Shows gratuitos</a></li>
+              <li><a class="dropdown-item" onclick="agregarCards('gratuidad',false)">Shows pagos</a></li>
+            </ul>
+            <button class="btn btn-primary" type="button" onclick="agregarCards('ninguno','ninguno')">Todos</button>
+            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Ordenar
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <li><a class="dropdown-item">Mayor precio</a></li>
+              <li><a class="dropdown-item">Menor precio</a></li>
+              <li><a class="dropdown-item">Fecha más reciente</a></li>
+              <li><a class="dropdown-item">Fecha más antigua</a></li>
+            </ul>
           </div>
         </div>
       </div>
