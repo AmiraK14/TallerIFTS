@@ -14,80 +14,9 @@ request.onload = function() {
     agregarCards('ninguno','ninguno');
     seleccionarCategoria();
     cambiarCriterioOrdenamiento();
+    agregarCardsXParametro();
 }
 
-
-function ordenarUnParamDesc(prop){
-    return function(a,b){  
-        if(a[prop] < b[prop]){
-            return 1;
-        } else if(a[prop] > b[prop]){ 
-            return -1; 
-        } else {
-            return 0;
-        }
-    }
-}
-
-function ordenarUnParamAsc(prop){
-    return function(a,b){  
-        if(a[prop] > b[prop]){
-            return 1;
-        } else if(a[prop] < b[prop]){ 
-            return -1; 
-        } else {
-            return 0;
-        }
-    }
-}
-
-function ordenarVariosParamDesc(prop1,prop2, prop3){
-    return function(a,b){  
-        if(a[prop1] < b[prop1]){
-            return 1;
-        } else if(a[prop1] > b[prop1]){ 
-            return -1; 
-        } else {
-            if (a[prop2] < b[prop2]){
-                return 1;
-            } else if (a[prop2] > b[prop2]){
-                return -1
-            } else {
-                if (a[prop3] < b[prop3]){
-                    return 1;
-                } else if (a[prop3] > b[prop3]){
-                    return -1;
-                } else {
-                    return 0;
-                }
-            }
-        }
-    }
-}
-
-function ordenarVariosParamAsc(prop1,prop2, prop3){
-    return function(a,b){  
-        if(a[prop1] > b[prop1]){
-            return 1;
-        } else if(a[prop1] < b[prop1]){ 
-            return -1; 
-        } else {
-            if (a[prop2] > b[prop2]){
-                return 1;
-            } else if (a[prop2] < b[prop2]){
-                return -1
-            } else {
-                if (a[prop3] > b[prop3]){
-                    return 1;
-                } else if (a[prop3] < b[prop3]){
-                    return -1;
-                } else {
-                    return 0;
-                }
-            }
-        }
-    }
-}
 
 function ordenarFecha(criterio){
     shows = productos3Round.Shows;
@@ -122,7 +51,6 @@ function setCriterioOrdenamiento(){
         ordenarPrecio('mayor');
     }
 }
-
 
 function seleccionarCategoria(){
     $('#selectCategorias').change(function(){
@@ -203,6 +131,30 @@ function agregarCards(criterio,opcion){
     $('#contenedorCards').ready(function(){
         deshabilitarBotones();
     })
+}
+
+function agregarCardsXParametro(){
+    if (getParameterByName('idProducto') != ''){
+        for(i=0;i<shows.length;i++){
+            if (shows[i].id == getParameterByName('idProducto')){
+                $('#contenedorCards').empty();
+                miCard = '<div class="col-xl-4 col-lg-12">';
+                miCard += '<div class="card text-white mb-3 text-center">'
+                miCard += '<img src="'+shows[i].imgFlyer+'" class="card-img-top">'
+                miCard += '<div class="card-body">'
+                miCard += '<h5 class="card-title">'+shows[i].dia+'/'+shows[i].mes+'/'+shows[i].anio+'</h5>'
+                miCard += '<h6 class="card-title">'+shows[i].lugar+'</h6>'
+                miCard += '<h6 class="card-title">$ '+shows[i].precio+'</h6>'
+                miCard += '<div class="row">'
+                miCard += '<div class="col-6">'
+                miCard += '<button id="botonTickets'+shows[i].id+'" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalTickets">Tickets</button></div>'
+                miCard += '<div class="col-6">'  
+                miCard += '<button id="botonOpinion'+shows[i].id+'" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalComentario">Comentario</button>'
+                miCard += '</div></div></div></div></div>'
+                $('#contenedorCards').append(miCard);
+            }
+        }
+    }
 }
 
 function deshabilitarBotones(){
