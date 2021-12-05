@@ -72,6 +72,42 @@
             "img":"imagenes/flyersshow/06.jpg",
             "seccion":"shows.html",
             "destacado": true
-        }
+        },
+        {
+            "id":"show07",
+            "img":"imagenes/flyersshow/07.jpg",
+            "seccion":"shows.html",
+            "destacado": false
+        },
+        {
+            "id":"show08",
+            "img":"imagenes/flyersshow/08.jpg",
+            "seccion":"shows.html",
+            "destacado": false
+        },
+        {
+            "id":"show09",
+            "img":"imagenes/flyersshow/09.jpg",
+            "seccion":"shows.html",
+            "destacado": false
+        },
+        {
+            "id":"show10",
+            "img":"imagenes/flyersshow/10.jpg",
+            "seccion":"shows.html",
+            "destacado": false
+        },
+        {
+            "id":"show11",
+            "img":"imagenes/flyersshow/11.jpg",
+            "seccion":"shows.html",
+            "destacado": false
+        },
+        {
+            "id":"show12",
+            "img":"imagenes/flyersshow/12.jpg",
+            "seccion":"shows.html",
+            "destacado": false
+        },
     ]
 }
