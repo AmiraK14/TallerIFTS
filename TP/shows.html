@@ -20,30 +20,26 @@
             <h1 class="Titulo colorFondoNegro">NUESTRA MUSICA</h1>
         </div>
         <div id= "sectorBarraNavegacion" class="container colorFondoNegro"></div>
-        <div id= "botonesCategorias">
-          <div class="container gap-5 d-block my-2 pb-2 mx-auto d-flex justify-content-center">
-            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Por Localidad
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" onclick="agregarCards('localidad','CABA')">CABA</a></li>
-              <li><a class="dropdown-item" onclick="agregarCards('localidad','BA')">Gran Buenos Aires</a></li>
-            </ul>
-            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Por Fecha
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" onclick="agregarCards('vigencia',true)">Shows vigentes</a></li>
-              <li><a class="dropdown-item"  onclick="agregarCards('vigencia',false)">Shows anteriores</a></li>
-            </ul>
-            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Por Precio
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" onclick="agregarCards('gratuidad',true)">Shows gratuitos</a></li>
-              <li><a class="dropdown-item" onclick="agregarCards('gratuidad',false)">Shows pagos</a></li>
-            </ul>
-            <button class="btn btn-primary" type="button" onclick="agregarCards('ninguno','ninguno')">Todos</button>
+        <div class= "container">
+          <div class="row">
+            <div id="menuSelectCategorias" class="my-3 col-6 offset-3">
+              <select id="selectCategorias" class="form-select" aria-label="Default select example">
+                <option selected>Seleccione una categoría...</option>
+                <option id="allshowsOption" value="allshows">Todos</option>
+                <optgroup label="Por Localidad">
+                  <option id="CABAOption" value="CABA">CABA</option>
+                  <option id="BAOption" value="BA">Gran Buenos Aires</option>
+                </optgroup>
+                <optgroup label="Por Fecha">
+                  <option id="vigenteOption" value="vigentes">Vigentes</option>
+                  <option id="anterioresOption" value="anteriores">Anteriores</option>
+                </optgroup>
+                <optgroup label="Por Precio">
+                  <option id="gratuitosOption" value="gratuitos">Gratuitos</option>
+                  <option id="pagosOption" value="pagos">Pagos</option>
+                </optgroup>
+              </select>
+            </div>
           </div>
         </div>
         <div id="checkButtonsContainer">
@@ -78,7 +74,7 @@
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </div>
   </section>
   <section class="container">
