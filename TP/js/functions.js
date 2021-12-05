@@ -89,3 +89,75 @@ function crearRankStars(){
     stars += '<label for="star1" title="text">1 star</label></div>';
     $('.rankingStars').append(stars);                
 }
+
+function ordenarUnParamDesc(prop){
+    return function(a,b){  
+        if(a[prop] < b[prop]){
+            return 1;
+        } else if(a[prop] > b[prop]){ 
+            return -1; 
+        } else {
+            return 0;
+        }
+    }
+}
+
+function ordenarUnParamAsc(prop){
+    return function(a,b){  
+        if(a[prop] > b[prop]){
+            return 1;
+        } else if(a[prop] < b[prop]){ 
+            return -1; 
+        } else {
+            return 0;
+        }
+    }
+}
+
+function ordenarVariosParamDesc(prop1,prop2, prop3){
+    return function(a,b){  
+        if(a[prop1] < b[prop1]){
+            return 1;
+        } else if(a[prop1] > b[prop1]){ 
+            return -1; 
+        } else {
+            if (a[prop2] < b[prop2]){
+                return 1;
+            } else if (a[prop2] > b[prop2]){
+                return -1
+            } else {
+                if (a[prop3] < b[prop3]){
+                    return 1;
+                } else if (a[prop3] > b[prop3]){
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+    }
+}
+
+function ordenarVariosParamAsc(prop1,prop2, prop3){
+    return function(a,b){  
+        if(a[prop1] > b[prop1]){
+            return 1;
+        } else if(a[prop1] < b[prop1]){ 
+            return -1; 
+        } else {
+            if (a[prop2] > b[prop2]){
+                return 1;
+            } else if (a[prop2] < b[prop2]){
+                return -1
+            } else {
+                if (a[prop3] > b[prop3]){
+                    return 1;
+                } else if (a[prop3] < b[prop3]){
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+    }
+}
