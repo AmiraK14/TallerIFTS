@@ -6,23 +6,131 @@ request.send();
 productos3Round = '';
 request.onload = function() {
     productos3Round = request.response;
-    console.log(productos3Round);
+    shows = productos3Round.Shows;
     agregarNavbar();
     agregarBarraSecciones('vivo');
     crearRankStars();
+    ordenarFecha('reciente');
     agregarCards('ninguno','ninguno');
+}
+
+
+function ordenarUnParamDesc(prop){
+    return function(a,b){  
+        if(a[prop] < b[prop]){
+            return 1;
+        } else if(a[prop] > b[prop]){ 
+            return -1; 
+        } else {
+            return 0;
+        }
+    }
+}
+
+function ordenarUnParamAsc(prop){
+    return function(a,b){  
+        if(a[prop] > b[prop]){
+            return 1;
+        } else if(a[prop] < b[prop]){ 
+            return -1; 
+        } else {
+            return 0;
+        }
+    }
+}
+
+function ordenarVariosParamDesc(prop1,prop2, prop3){
+    return function(a,b){  
+        if(a[prop1] < b[prop1]){
+            return 1;
+        } else if(a[prop1] > b[prop1]){ 
+            return -1; 
+        } else {
+            if (a[prop2] < b[prop2]){
+                return 1;
+            } else if (a[prop2] > b[prop2]){
+                return -1
+            } else {
+                if (a[prop3] < b[prop3]){
+                    return 1;
+                } else if (a[prop3] > b[prop3]){
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+    }
+}
+
+function ordenarVariosParamAsc(prop1,prop2, prop3){
+    return function(a,b){  
+        if(a[prop1] > b[prop1]){
+            return 1;
+        } else if(a[prop1] < b[prop1]){ 
+            return -1; 
+        } else {
+            if (a[prop2] > b[prop2]){
+                return 1;
+            } else if (a[prop2] < b[prop2]){
+                return -1
+            } else {
+                if (a[prop3] > b[prop3]){
+                    return 1;
+                } else if (a[prop3] < b[prop3]){
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+    }
+}
+
+function ordenarFecha(criterio){
+    shows = productos3Round.Shows;
+    if (criterio == 'reciente'){
+        shows.sort(ordenarVariosParamDesc('anio','mes','dia'));
+    } else if (criterio == 'antigua'){
+        shows.sort(ordenarVariosParamAsc('anio','mes','dia'));
+    }
+}
+
+function ordenarPrecio(criterio){
+    shows = productos3Round.Shows;
+    if (criterio == 'mayor'){
+        shows.sort(ordenarUnParamDesc('precio'));
+    } else if (criterio == 'menor'){
+        shows.sort(ordenarUnParamAsc('precio'));
+    }
+}
+
+function setCriterioOrdenamiento(){
+    botonFechaReciente = $('#flexRadioDefault1').prop('checked');
+    botonFechaAntigua = $('#flexRadioDefault2').prop('checked');
+    botonMenorPrecio = $('#flexRadioDefault3').prop('checked');
+    botonMayorPrecio = $('#flexRadioDefault4').prop('checked');
+    if (botonFechaReciente == true){
+        ordenarFecha('reciente');
+    } else if (botonFechaAntigua == true){
+       ordenarFecha('antigua');
+    } else if (botonMenorPrecio == true){
+        ordenarPrecio('menor');
+    } else if (botonMayorPrecio == true){
+        ordenarPrecio('mayor');
+    }
 }
 
 
 function agregarCards(criterio,opcion){
     $('#contenedorCards').empty();
-    shows = productos3Round.Shows;
+    setCriterioOrdenamiento();
     for (i=0;i<shows.length;i++){
         miCard = '<div class="col-xl-4 col-lg-12">';
         miCard += '<div class="card text-white mb-3 text-center">'
         miCard += '<img src="'+shows[i].imgFlyer+'" class="card-img-top">'
         miCard += '<div class="card-body">'
-        miCard += '<h5 class="card-title">'+shows[i].dia+'/'+shows[i].mes+'/'+shows[i].año+'</h5>'
+        miCard += '<h5 class="card-title">'+shows[i].dia+'/'+shows[i].mes+'/'+shows[i].anio+'</h5>'
         miCard += '<h6 class="card-title">'+shows[i].lugar+'</h6>'
         miCard += '<h6 class="card-title">$ '+shows[i].precio+'</h6>'
         miCard += '<div class="row">'

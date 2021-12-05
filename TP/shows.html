@@ -44,15 +44,38 @@
               <li><a class="dropdown-item" onclick="agregarCards('gratuidad',false)">Shows pagos</a></li>
             </ul>
             <button class="btn btn-primary" type="button" onclick="agregarCards('ninguno','ninguno')">Todos</button>
-            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Ordenar
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item">Mayor precio</a></li>
-              <li><a class="dropdown-item">Menor precio</a></li>
-              <li><a class="dropdown-item">Fecha más reciente</a></li>
-              <li><a class="dropdown-item">Fecha más antigua</a></li>
-            </ul>
+          </div>
+        </div>
+        <div id="checkButtonsContainer">
+          <div class="row">
+            <div class="col-2 offset-4">
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+              <label class="form-check-label" for="flexRadioDefault1" style="color: white;">
+                Fecha Más Reciente
+              </label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2" style="color: white;">
+                Fecha Mas Antigua
+              </label>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3" style="color: white;">
+                Menor Precio
+              </label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+              <label class="form-check-label" for="flexRadioDefault4" style="color: white;">
+                Mayor Precio
+              </label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
