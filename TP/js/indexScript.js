@@ -9,15 +9,20 @@ request.onload = function() {
     mostrarProductosDestacados();
 }
 
+
+
 function mostrarProductosDestacados(){
+    contadorDestacados = 0;
     productosTotales = productos3Round.allProducts;
+    productosTotales = productosTotales.sort((a, b) => 0.5 - Math.random());
     for (i=0;i<productosTotales.length;i++){
-        if(productosTotales[i].destacado == true){
+        if(productosTotales[i].destacado == true && contadorDestacados < 6){
             miniatura = '<div class="col-2">';
             miniatura += '<form  method="get" action="'+productosTotales[i].seccion+'">'
             miniatura += '<button type="submit"><img src="'+productosTotales[i].img+'" class="img-thumbnail"></button>';
             miniatura += '<input type="hidden" name="idProducto" value="'+productosTotales[i].id+'"></div></form>'
             $('#thumbnailsContainer').append(miniatura);
-        }
-    }
+            contadorDestacados++;
+            }
+        }   
 }
