@@ -83,13 +83,13 @@
             "id":"show08",
             "img":"imagenes/flyersshow/08.jpg",
             "seccion":"shows.html",
-            "destacado": false
+            "destacado": true
         },
         {
             "id":"show09",
             "img":"imagenes/flyersshow/09.jpg",
             "seccion":"shows.html",
-            "destacado": false
+            "destacado": true
         },
         {
             "id":"show10",
