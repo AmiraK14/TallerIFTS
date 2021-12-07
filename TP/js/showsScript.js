@@ -170,22 +170,23 @@ function deshabilitarBotones(){
     }
 }
 
-
 function validarFormularioCompra(){
     mail = document.getElementById('formCompraMail');
     cantidadTickets = document.getElementById('formCompraCantidad');
     nombre = document.getElementById("formCompraNombre");
     apellido = document.getElementById("formCompraApellido");
     if (nombre.value == '') {
-        alert("Debe completar el campo nombre");
+        llamarModalIncompleto('nombre');
     } else if (apellido.value == '') {
-        alert("Debe completar el campo apellido");
+        llamarModalIncompleto('apellido');
     } else if (mail.value == '') {
-        alert("Debe completar el campo mail");
-    } else if (cantidadTickets.value == 'Selecciona la cantidad de tickets') {
-        alert("Debe seleccionar la cantidad de tickets que desea adquirir")
+        llamarModalIncompleto('mail');
+    } else if (validarEmail(mail.value)==false){
+        llamarModalMailInvalido();
+    } else if(cantidadTickets.value == 'Selecciona la cantidad de tickets') {
+        llamarModalIncompleto('cantidad de tickets')
     } else {
-        alert(nombre.value+' '+apellido.value+'\n'+mail.value+"\n"+"Vas a comprar la cantidad de "+cantidadTickets.value+' tickets\nRESERVA EXITOSA');
+        llamarModalCompletoCompra(nombre.value,apellido.value,mail.value,cantidadTickets.value);
     }
 }
 
@@ -198,12 +199,35 @@ function validarFormularioComentario(){
     mail = $('#formComentarioMail').val();
     comentario = $('#formComentarioComentario').val();
     if (star1 == false && star2 == false && star3 == false && star4 == false && star5 == false){
-        alert("Ingrese una puntuacion");
+        llamarModalIncompleto('puntuacion');
     } else if (mail == '') {
-        alert("Debe completar el campo mail");
+        llamarModalIncompleto('e-mail');
+    } else if (validarEmail(mail)==false) {
+        llamarModalMailInvalido();
     } else if (comentario == '') {
-        alert("Deje su comentario para continuar");
+        llamarModalIncompleto('comentario');
     } else {
-        alert(mail+' su comentario ha sido enviado con exito');
+        llamarModalCompleto('mail');
     }
+}
+
+
+function llamarModalCompletoCompra(nombre, apellido, mail, tickets){
+    $('#modalsSection').empty();
+    miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
+    miModal += '<div class="modal-dialog">'
+    miModal += '<div class="modal-content">'
+    miModal += '<div class="modal-header">'
+    miModal += '<h5 class="modal-title">Reserva exitosa</h5>'
+    miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
+    miModal += '<div class="modal-body">'
+    miModal += '<p><strong>'+nombre+' '+apellido+'</strong> registrado con el e-mail <strong>'+mail+'</strong> has reservado <strong>'+tickets+'</strong> tickets</p></div>'
+    miModal += '<div class="modal-footer">'
+    miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
+    miModal += '</div></div></div></div>'
+    $('#modalsSection').append(miModal);
+    $('#modalCompleto').show();
+    $('.botonCerrarModal').click(function(){
+        $('#modalCompleto').hide();
+    })
 }
