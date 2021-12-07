@@ -1,52 +1,55 @@
 {
     "articulosMerchandising" : [
-       {
-           "nombre" : "Remera",
-           "imgRemera" : "imagenes/merch/imagenremera3round.jpg",
-           "talle" : "XXL",                      
-           "diseño": "Original3ROUND",
-           "precio": "$1.500",
-           "destacado" : false
-       },   
-       {  
-           "nombre" : "Disco CD 3ROUND",
-           "imgCD3round" : "imagenes/merch/imagenCD3round.jpg",
-           "nombreDelAlbum" : "Canciones de noche",
-           "estreno" : "14 de febrero 2018",
-           "discografica" : "Juan Perez",
-           "cantidadDeTemas" : "15",
-           "precio" : "$1.500",
-           "destacado" : false
-       },
-       {
-           "nombre" : "VasoCervezero",
-           "imgPua" : "imagenes/merch/pua3ROUND.jpg",
-           "diseño" : "vasonegro3ROUND",
-           "precio" : "$1.500",
-           "destacado" : false
-      },
-      {
-           "nombre" : "Pua",
-           "imgVaso" : "imagenes/merch/vasoCervecero3ROUND.jpg",
-           "diseño" : "Original3ROUND",
-           "precio" : "$1.500",
-           "destacado" : false
-      }
-   ],
-   "tazas" : [
-       { 
-           "nombre" : "Taza 1",
-           "imgTaza1" : "imagenes/merch/taza3ROUND.jpg",
-           "diseño" : "Tazanegra3round",
-           "precio" : "$1.500", 
-           "destacado" : false
+        {
+            "id":"merch01",
+            "nombre" : "Remera3round",
+            "img":"imagenes/merch/imagenremera3round.jpg",
+            "seccion":"merchandising.html",
+            "precio" : 4500,
+            "destacado": false
         },
         {
-            "nombre" : "Taza 2",
-            "imgTaza2" : "imagenes/merch/tazaDistintoModelo3ROUND.jpg",
-            "diseño" : "TazanegraEstrellaLogo",
-            "precio" : "$1.500",
-            "destacado" : false
-       }
+            "id":"merch02",
+            "nombre" : "CD",
+            "Album" : "Canciones de Noche",
+            "img":"imagenes/merch/imagenCD3round.jpg",
+            "seccion":"merchandising.html",
+            "precio" : 5000,
+            "destacado": true
+        },
+        {
+            "id":"merch03",
+            "nombre" : "Pua",
+            "img":"imagenes/merch/pua3ROUND.jpg",
+            "seccion":"merchandising.html",
+            "precio" : 500,
+            "destacado": true
+        },
+        {
+            "id":"merch04",
+            "nombre" : "vasoCervecero",
+            "img":"imagenes/merch/vasoCervecero3ROUND.jpg",
+            "seccion":"merchandising.html",
+            "precio" : 1500,
+            "destacado": false
+        },
+        {
+            "id":"merch05",
+            "nombre" : "Taza",
+            "diseño" : "Taza3RoundNegra",
+            "img":"imagenes/merch/taza3ROUND.jpg",
+            "seccion":"merchandising.html",
+            "precio" : 1500,
+            "destacado": true
+        },
+        {
+            "id":"merch06",
+            "nombre" : "Taza",
+            "diseño" : "Taza3RoundBlanca",
+            "img":"imagenes/merch/tazaDistintoModelo3ROUND.jpg",
+            "seccion":"merchandising.html",
+            "precio" : 1500,
+            "destacado": false
+        }
    ]
 }
