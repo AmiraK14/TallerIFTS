@@ -64,8 +64,12 @@ function validarFormularioComentario(){
     } else if (comentario == '') {
         llamarModalIncompleto('comentario');
     } else {
-        llamarModalCompleto(mail);
-        $('#formComentario').submit();
+        if (validarEmail(mail) == false){
+            alert('Debe ingresar una dirección de e-mail válida');
+        } else {
+            llamarModalCompleto(mail);
+            $('#formComentario').submit();
+        }
     }
 }
 
