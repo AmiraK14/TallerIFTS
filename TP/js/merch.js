@@ -1,4 +1,4 @@
-const url = 'json/productos.json';
+const url = 'json/merchandising.json';
 const request = new XMLHttpRequest;
 request.open('GET', url);
 request.responseType = 'json';
