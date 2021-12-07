@@ -11,7 +11,6 @@ request.onload = function() {
     agregarBarraSecciones('linea');
     crearRankStars();
     agregarComentario();
-    //esperarEnvio();
 }
 
 
@@ -90,7 +89,6 @@ function llamarModalIncompleto(campo){
     })
 }
 
-
 function llamarModalCompleto(mail){
     $('#modalsSection').empty();
     miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
@@ -116,10 +114,15 @@ function agregarComentario(){
     puntaje= getParameterByName('rate');
     comentario=getParameterByName('commentFormulario');
     if (mail!=''){
-        newComment = '<div class="ms-2 me-auto">'
-        newComment += '<div class="fw-bold">'+mail+'</div>'
-        newComment += comentario+'</div>'
-        $('#ContenedorComentarios').prop('hidden',false);
+        newComment = '<li class="list-group-item d-flex justify-content-between align-items-start">'
+        newComment += '<div class="ms-2 me-auto">';
+        newComment += '<div class="fw-bold">'+mail+'</div>';
+        newComment += comentario+'</div></li>';
+        //$('#ContenedorComentarios').prop('hidden',false);
+        cantidadComentarios=$('#cantidadComentarios').text();
+        cantidadComentariosInt=parseInt(cantidadComentarios);
+        cantidadComentariosInt++;
+        $('#cantidadComentarios').text(cantidadComentariosInt);
         $('#listadoComentarios').append(newComment);
     }
 }
