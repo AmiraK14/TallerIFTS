@@ -24,6 +24,12 @@ function getParameterByName(name) {
 
 let params = new URLSearchParams(location.search);
 
+function validarEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+}
+
+
 function agregarNavbar(){
     var miNavBar = '<nav class="navbar navbar-dark bg-dark fixed-top">';
     miNavBar += '<nav class="navbar navbar-dark bg-dark fixed-top">';
@@ -161,3 +167,5 @@ function ordenarVariosParamAsc(prop1,prop2, prop3){
         }
     }
 }
+
+
