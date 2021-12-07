@@ -187,6 +187,7 @@ function validarFormularioCompra(){
         llamarModalIncompleto('cantidad de tickets')
     } else {
         llamarModalCompletoCompra(nombre.value,apellido.value,mail.value,cantidadTickets.value);
+        $('#formCompraShows').submit();
     }
 }
 
@@ -207,7 +208,8 @@ function validarFormularioComentario(){
     } else if (comentario == '') {
         llamarModalIncompleto('comentario');
     } else {
-        llamarModalCompleto('mail');
+        llamarModalCompleto(mail);
+        $('#formComentarioShows').submit();
     }
 }
 
