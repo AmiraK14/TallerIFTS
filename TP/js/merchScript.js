@@ -7,10 +7,10 @@ productosTresRound = '';
 
 request.onload = function(){
     productosTresRound = request.response;
+    merch = merchandising3Round;
     console.log(productosTresRound);
-    agregarNavbar();
-    agregarBarraSeccion('merch');
-    
+    agregarNavbar(); 
+    agregarBarraSecciones('merch');
 }
 
 function agregarNavbar(){
@@ -40,6 +40,7 @@ function agregarNavbar(){
             
     $('#headerSecciones').append(miNavBar);
 }
+
 function agregarBarraSecciones(seccion){
     var BarraSecciones = '<ul class="nav nav-tabs">';
     BarraSecciones += '<li class="nav-item">';
@@ -62,3 +63,15 @@ function agregarBarraSecciones(seccion){
         }
     })
 }
+function agregarBarraSecciones(seccion){
+    var BarraSecciones = '<ul class="nav nav-tabs">';
+    BarraSecciones += '<li class="nav-item">';
+    BarraSecciones += '<a id="enLinea" class="nav-link" href="musica.html">En linea</a>';
+    BarraSecciones += '</li>';
+    BarraSecciones += '<li class="nav-item">';
+    BarraSecciones += '<a id="enVivo" class="nav-link" aria-current="page" href="shows.html">En vivo</a>';
+    BarraSecciones += '</li>';
+    BarraSecciones += '<li class="nav-item">';
+    BarraSecciones += '<a id="enMerch" class="nav-link" href="merchandising.html">En merchandising</a></li></ul>';
+    $('#sectorBarraNavegacion').append(BarraSecciones);
+    }
