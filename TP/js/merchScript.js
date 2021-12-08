@@ -11,6 +11,7 @@ request.onload = function(){
     console.log(merch)
     agregarNavbar(); 
     agregarBarraSecciones('merch');
+    ordenarDestacados('destacado');
 }
 
 function agregarNavbar(){
@@ -63,3 +64,12 @@ function agregarBarraSecciones(seccion){
         }
     })
 }
+function ordenarDestacados(criterio){
+   merch = productosTresRound.articulosMerchandising;
+    if (criterio == 'destacado'){
+       merch.sort(('destacado'));
+    } else if (criterio == 'no destacado'){
+        merch.sort(('destacado'));
+    }
+}
+
