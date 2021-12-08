@@ -7,7 +7,7 @@ productosTresRound = '';
 
 request.onload = function(){
     productosTresRound = request.response;
-    merch = merchandising3Round;
+    merch = productosTresRound.merch;
     console.log(productosTresRound);
     agregarNavbar(); 
     agregarBarraSecciones('merch');
