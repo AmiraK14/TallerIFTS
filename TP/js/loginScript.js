@@ -42,6 +42,8 @@ function validarCampos(){
             llamarModalMailInvalido();
         } else if (pass == ''){
             llamarModalIncompleto('contraseña');
+        } else {
+            $('#formLogin').submit();
         }
     }
 }
