@@ -10,51 +10,17 @@
 </head>
 <body>
     <div class="container">
-      <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <div class="row">
-            <a class="navbar-brand" href="../index.html">
-            <img src="../imagenes/logo_estrella.png" id="estrellaLogo" class= "d-none d-lg-block">
-            <img src="../imagenes/logo_nombrebanda.png" id="nombreLogo">
-            </a>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../nosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="../musica.html" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Nuestra música
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                    <li><a class="dropdown-item" href="../musica.html">En línea</a></li>
-                    <li><a class="dropdown-item" href="../shows.html">En vivo</a></li>
-                    <li><a class="dropdown-item" href="../merchandising.html">En merchandising</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../formulario.html">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+        <div id="headerSecciones"></div>
         <div class="row">
             <div id= "Contenedor" class="col-4 offset-4">
                 <div class="mb-4">
                   <h4 style="text-align: center;">Area del administrador</h4>
                 </div>
                 <div class="mb-3">
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
+                  <input type="email" class="form-control" id="loginInputEmail" placeholder="E-mail">
                 </div>
                   <div class="mb-3">
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="Contraseña">
+                    <input type="password" class="form-control" id="loginInputPassword" placeholder="Contraseña">
                   </div>
                   <div class="mb-3 d-grid col-4 mx-auto">
                     <a href= "perfiles.html"><button type="button" class="btn btn-dark">Iniciar Sesión</button></a>
@@ -62,6 +28,12 @@
             </div>
         </div>
     </div>
+
+    <div id="modalsSection"></div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/loginScript.js"></script>
 </body>
 </html>
