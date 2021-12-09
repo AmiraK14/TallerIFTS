@@ -16,14 +16,16 @@
                 <div class="mb-4">
                   <h4 style="text-align: center;">Area del administrador</h4>
                 </div>
-                <div class="mb-3">
-                  <input type="email" class="form-control" id="loginInputEmail" placeholder="E-mail">
-                </div>
+                <form id="formLogin" method="get" action="perfiles.html">
                   <div class="mb-3">
-                    <input type="password" class="form-control" id="loginInputPassword" placeholder="Contraseña">
-                  </div>
+                    <input type="email" class="form-control" id="loginInputEmail" name="usuario" placeholder="E-mail">
+                    </div>
+                    <div class="mb-3">
+                      <input type="password" class="form-control" id="loginInputPassword" name="password" placeholder="Contraseña">
+                   </div>
+                </form>
                   <div class="mb-3 d-grid col-4 mx-auto">
-                    <a href= "perfiles.html"><button type="button" class="btn btn-dark">Iniciar Sesión</button></a>
+                    <button type="button" class="btn btn-dark" onclick="validarCampos()">Iniciar Sesión</button>
                   </div>
             </div>
         </div>
