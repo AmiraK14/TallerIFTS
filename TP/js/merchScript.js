@@ -67,12 +67,14 @@ function agregarBarraSecciones(seccion){
 function agregarCards(){
     merch = productosTresRound.articulosMerchandising;
     for (i=0;i<merch.length;i++){
-         miCard = ' <div class="col-xl-4 col-lg-12">'
-         miCard +=' <div class="card text-white mb-3 text-center">'
-         miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> '
-         miCard +=' <div class="card-body">'
-         miCard +=' <h5 class="card-title">'+merch[i].destacado+' </h5> '
-         miCard += '<a href="descripcion.html" class="btn btn-secondary">Ver Articulo</a>'
-         miCard += '</div></div></div>'
+         miCard = ' <div class="col-xl-4 col-lg-12">';
+         miCard +=' <div class="card text-white mb-3 text-center">';
+         miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
+         miCard +=' <div class="card-body">';
+         miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> ';
+         miCard += '<a href="descripcion.html" class="btn btn-secondary">Ver Articulo</a>';
+         miCard += '</div></div></div>';
+         $('#sectorAgregarCards').append(miCard);
+         
         }
     }
