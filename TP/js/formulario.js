@@ -1,22 +1,33 @@
-function validarFormularioContacto() {
-    nombre = document.getElementById('nombre');
-    apellido = document.getElementById('apellido');
-    telefono = document.getElementById("celular");
-    email = document.getElementById("email");
-    comentario = document.getElementById('comentario')
-    if (nombre.value == '') {
-        alert("Debe completar el campo nombre");
-    } else if (apellido.value == '') {
-        alert("Debe completar el campo apellido");
-    } else if (celular.value == '') {
-        alert("Debe completar el campo telefono");
-    } else if (email.value == 'Debe completar el campo email') {
-        alert("Debe completar el campo email")
-    } else if (comentario.value == 'Debe completar el campo comentario') {
-        alert("Debe completar el campo email")
-    } else {
-        alert("los datos fueron enviados exitosamente" + '\n' +
+abrirModal();
+cerrarModal();
 
-            nombre.value + ' ' + apellido.value + '\n' + mail.value + "\n");
-    }
+
+/* function enviarDatos() {
+    $('#botonEnviar').click(function() {
+        validarDatos;
+    })
+
+
+*/
+
+function abrirModal() {
+    $('#botonEnviar').click(function() {
+        nombre = $('#nombre').val();
+        apellido = $('#apellido').val();
+        celular = $('#celular').val();
+        email = $('#email').val();
+        comentario = $('#comentario').val();
+        if (nombre == '' || apellido == '' || celular == '' || email == '' || comentario == '') {
+            $('#modalUno').show();
+        } else { $('#modalDos').show(); }
+    })
+
+}
+
+function cerrarModal() {
+    $('.botonCerrarModal').click(function() {
+        $('#modalUno').hide();
+
+    })
+
 }
