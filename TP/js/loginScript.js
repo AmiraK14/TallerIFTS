@@ -3,9 +3,9 @@ let usuariosJson = '';
 $.getJSON(URL,function(data){
     usuariosJson = data;
 })
-
-agregarNavbar();
-
+.done(function(){
+    agregarNavbar();
+})
 
 function agregarNavbar(){
     var miNavBar = '<nav class="navbar navbar-dark bg-dark fixed-top">';
@@ -36,31 +36,102 @@ function agregarNavbar(){
 }
 
 
-
 function validarCampos(){
     mail = $('#loginInputEmail').val();
     pass = $('#loginInputPassword').val();
     if (mail == ''){
-        llamarModalIncompleto('e-mail');
+        llamarModalIncompleto('usuario');
     } else if (pass == ''){
         llamarModalIncompleto('contraseña');
     } else {
-        checkUserData(mail,pass);
+        sha256(pass).then(function(respuestaHash){
+            checkUserData(mail,respuestaHash);
+        })
     }
 }
 
 function checkUserData(usuario,password){
     usuarios = usuariosJson.Users;
     usuarioExistente = false;
+    indiceUsuario = '';
     for (i=0;i<usuarios.length;i++){
         if (usuario == usuarios[i].user){
             usuarioExistente = true;
-            //alert("USUARIO EXISTENTE");
+            indiceUsuario = i;
         }
     }
     if (usuarioExistente == false){
-        alert("El usuario no se encuentra registrado");
+        llamarModalUsuarioInexistente(usuario);
     } else {
-        alert("USUARIO EXISTENTE");
+        passParsed=JSON.stringify(usuariosJson.Users[indiceUsuario].password);
+        passParsed=JSON.parse(passParsed);
+        if (password==passParsed){
+            llamarModalIngresoExitoso(usuario);
+            $('#formLogin').submit();
+        } else {
+            llamarModalContraseñaIncorrecta();
+        }
     }
 }
+
+function llamarModalUsuarioInexistente(username){
+    $('#modalsSection').empty();
+    miModal = '<div id="modalUsuarioInexistente" class="modal" tabindex="-1">'
+    miModal += '<div class="modal-dialog">'
+    miModal += '<div class="modal-content">'
+    miModal += '<div class="modal-header">'
+    miModal += '<h5 class="modal-title">Acceso denegado</h5>'
+    miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
+    miModal += '<div class="modal-body">'
+    miModal += '<p>El usuario <strong>'+username+'</strong> no se encuentra registrado</p></div>'
+    miModal += '<div class="modal-footer">'
+    miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
+    miModal += '</div></div></div></div>'
+    $('#modalsSection').append(miModal);
+    $('#modalUsuarioInexistente').show();
+    $('.botonCerrarModal').click(function(){
+        $('#modalUsuarioInexistente').hide();
+    })
+}
+
+function llamarModalContraseñaIncorrecta(){
+    $('#modalsSection').empty();
+    miModal = '<div id="modalContraseñaIncorrecta" class="modal" tabindex="-1">'
+    miModal += '<div class="modal-dialog">'
+    miModal += '<div class="modal-content">'
+    miModal += '<div class="modal-header">'
+    miModal += '<h5 class="modal-title">Acceso denegado</h5>'
+    miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
+    miModal += '<div class="modal-body">'
+    miModal += '<p>La contraseña ingresada es incorrecta</p></div>'
+    miModal += '<div class="modal-footer">'
+    miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
+    miModal += '</div></div></div></div>'
+    $('#modalsSection').append(miModal);
+    $('#modalContraseñaIncorrecta').show();
+    $('.botonCerrarModal').click(function(){
+        $('#modalContraseñaIncorrecta').hide();
+    })
+}
+
+function llamarModalIngresoExitoso(username){
+    $('#modalsSection').empty();
+    miModal = '<div id="modalIngresoExitoso" class="modal" tabindex="-1">'
+    miModal += '<div class="modal-dialog">'
+    miModal += '<div class="modal-content">'
+    miModal += '<div class="modal-header">'
+    miModal += '<h5 class="modal-title">Ingreso exitoso</h5>'
+    miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
+    miModal += '<div class="modal-body">'
+    miModal += '<p>Bienvenido al sistema <strong>'+username+'<strong></p></div>'
+    miModal += '<div class="modal-footer">'
+    miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
+    miModal += '</div></div></div></div>'
+    $('#modalsSection').append(miModal);
+    $('#modalIngresoExitoso').show();
+    $('.botonCerrarModal').click(function(){
+        $('#modalIngresoExitoso').hide();
+    })
+}
+
+
