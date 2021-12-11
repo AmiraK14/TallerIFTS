@@ -4,7 +4,19 @@
             "id": 1,
             "user": "Grupo03",
             "temp": "TallerIFT$2021",
-            "password": "d002ef3bf5f4a4c0be703a08f6f0331a7013e70da5b522dd2bac52a8f7471966"
+            "password": "d6df7fa0fa5867fe36f67feb94489e8497e086a6548966c0eb9827c9bda72a97"
+        },
+        {
+            "id": 2,
+            "user": "AmiraK",
+            "temp": "Amir@2021",
+            "password": "b7dfabcef15e9f83de21fa21f0609cbdf32d12d2a24aaee9ba671dc35a1f7588"
+        },
+        {
+            "id": 3,
+            "user": "GonzaloB",
+            "temp": "Gonz@lo2021",
+            "password": "05370c68eef7066ec3936a5b80296376e2752ae960a09e0bf3f415a5fc331482"
         }
     ] 
 }
