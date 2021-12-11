@@ -12,6 +12,7 @@ request.onload = function(){
     agregarNavbar(); 
     agregarBarraSecciones('merch');
     agregarCards();
+    agregarCardsXParametro();
 }
 
 function agregarNavbar(){
@@ -65,6 +66,8 @@ function agregarBarraSecciones(seccion){
     })
 }
 function agregarCards(){
+    $('#sectorAgregarCards').empty();
+    setCriterioOrdenamiento();
     merch = productosTresRound.articulosMerchandising;
     for (i=0;i<merch.length;i++){
          miCard = ' <div class="col-xl-4 col-lg-12">';
@@ -77,3 +80,39 @@ function agregarCards(){
          $('#sectorAgregarCards').append(miCard);              
         }
     }
+function agregarCardsXParametro(){
+    if (getParameterByName('idProducto') != ''){
+    for(i=0;i<merch.length;i++){
+    if (merch[i].id == getParameterByName('idProducto')){
+    $('#sectorAgregarCards').empty();
+         miCard = ' <div class="col-xl-4 col-lg-12">';
+         miCard +=' <div class="card text-white mb-3 text-center">';
+         miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
+         miCard +=' <div class="card-body">';
+         miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> ';        
+         miCard += '<a href="descripcion.html" class="btn btn-secondary">Ver Articulo</a>';
+         miCard += '</div></div></div>';              
+        $('#sectorAgregarCards').append(miCard);
+                }
+            }
+        }
+    }
+    function ordenarAZ(criterio){
+        merch = productosTresRound.articulosMerchandising;
+        if (criterio == 'de la A a la Z'){
+           merch.sort(ordenarUnParamDesc('nombre'));
+        } else if (criterio == 'de la Z a la A'){
+            merch.sort(ordenarUnParamAsc('nombre'));
+        }
+    }
+    function setCriterioOrdenamiento(){
+        botonDeLaAaLaZ = $('#flexRadioDefault1').prop('checked');
+        botonDeLaZaLaA = $('#flexRadioDefault2').prop('checked');      
+     if (botonDeLaAaLaZ == nombre){
+        ordenarAZ('A z');
+    } else if (botonDeLaZaLaA == nombre){
+       ordenarAZ('Z a');
+    }
+}
+        
+ 

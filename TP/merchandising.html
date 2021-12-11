@@ -105,17 +105,42 @@
               <select id="selectCategorias" class="form-select" aria-label="Default select example">
                 <option selected id="allmerchadisingOption" value="allmerchadising">Todos los articulos</option>
                 <optgroup label="Por Orden Alfabetico">
-                  <option id="" value="CABA">De la A a la Z</option>
-                  <option id="" value="BA">De la Z a la A</option>
+                  <option id="nombre" value="a">De la A a la Z</option>
+                  <option id="nombre" value="BA">De la Z a la A</option>
                 </optgroup>
                 <optgroup label="Mostrar Productos Destacados">
                     <option id="Destacados" value="Destacados">Productos Destacados</option>                  
                   </optgroup>                
               </select>
             </div>      
-            <section class="container">
-                <div id= "sectorAgregarCards" class="row"></div>
-              </section>
+            <div id="checkButtonsContainer">
+                <div class="row">
+                  <div class="col-xl-3 col-lg-6">
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1" style="color: white;">
+                      De la A a la Z
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2" style="color: white;">
+                     De la Z a la A
+                    </label>
+                    </div>
+                    <div class="form-check">
+                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                     <label class="form-check-label" for="flexRadioDefault2" style="color: white;">
+                       Productos Destacados
+                     </label>
+                     </div>
+                  </div>                
+            </div>
+          </div>
+        </section>
+    <section class="container"> 
+        <div id="sectorAgregarCards" class="row"></div>
+</section>
              <!--  <div class="container">
         <div id="primeraFila" class="row">
             <div class="col-xl-4 col-lg-12">
