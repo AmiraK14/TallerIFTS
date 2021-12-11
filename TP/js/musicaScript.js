@@ -61,7 +61,7 @@ function validarFormularioComentario(){
         llamarModalIncompleto('mail');
     } else {
         if (validarEmail(mail) == false){
-            alert('Debe ingresar una dirección de e-mail válida');
+            llamarModalMailInvalido();
         } else if (star1 == false && star2 == false && star3 == false && star4 == false && star5 == false){
             llamarModalIncompleto('puntuacion');
         } else if (comentario == '') {
