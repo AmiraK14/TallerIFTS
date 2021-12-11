@@ -82,7 +82,6 @@ function agregarComentario(){
         newComment += '<div class="ms-2 me-auto">';
         newComment += '<div class="fw-bold">'+mail+'</div>';
         newComment += comentario+'</div></li>';
-        //$('#ContenedorComentarios').prop('hidden',false);
         cantidadComentarios=$('#cantidadComentarios').text();
         cantidadComentariosInt=parseInt(cantidadComentarios);
         cantidadComentariosInt++;
