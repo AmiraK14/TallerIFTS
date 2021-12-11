@@ -1,8 +1,10 @@
+URL = '../json/datosUsers.json';
+let usuariosJson = '';
+$.getJSON(URL,function(data){
+    usuariosJson = data;
+})
+
 agregarNavbar();
-
-
-//agregarNavbar();
-//validarCampos();
 
 
 function agregarNavbar(){
@@ -40,25 +42,15 @@ function validarCampos(){
     pass = $('#loginInputPassword').val();
     if (mail == ''){
         llamarModalIncompleto('e-mail');
+    } else if (pass == ''){
+        llamarModalIncompleto('contraseña');
     } else {
-        if (validarEmail(mail) == false){
-            llamarModalMailInvalido();
-        } else if (pass == ''){
-            llamarModalIncompleto('contraseña');
-        } else {
-            URL = '../json/datosUsers.json';
-            $.getJSON(URL,function(data){
-                console.log(data);
-                checkUserData(data,mail,pass);
-            })
-            //checkUserData(mail,pass);
-            //$('#formLogin').submit();
-        }
+        checkUserData(mail,pass);
     }
 }
 
-function checkUserData(data,usuario,password){
-    usuarios = data.Users;
+function checkUserData(usuario,password){
+    usuarios = usuariosJson.Users;
     usuarioExistente = false;
     for (i=0;i<usuarios.length;i++){
         if (usuario == usuarios[i].user){
