@@ -1,4 +1,7 @@
 agregarNavbar();
+
+
+//agregarNavbar();
 //validarCampos();
 
 
@@ -43,7 +46,29 @@ function validarCampos(){
         } else if (pass == ''){
             llamarModalIncompleto('contraseña');
         } else {
-            $('#formLogin').submit();
+            URL = '../json/datosUsers.json';
+            $.getJSON(URL,function(data){
+                console.log(data);
+                checkUserData(data,mail,pass);
+            })
+            //checkUserData(mail,pass);
+            //$('#formLogin').submit();
         }
+    }
+}
+
+function checkUserData(data,usuario,password){
+    usuarios = data.Users;
+    usuarioExistente = false;
+    for (i=0;i<usuarios.length;i++){
+        if (usuario == usuarios[i].user){
+            usuarioExistente = true;
+            //alert("USUARIO EXISTENTE");
+        }
+    }
+    if (usuarioExistente == false){
+        alert("El usuario no se encuentra registrado");
+    } else {
+        alert("USUARIO EXISTENTE");
     }
 }
