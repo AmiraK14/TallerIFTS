@@ -8,11 +8,12 @@ productosTresRound = '';
 request.onload = function(){
     productosTresRound = request.response;
     merch = productosTresRound.articulosMerchandising;
-    console.log(merch)
+    console.log(merch);
     agregarNavbar(); 
     agregarBarraSecciones('merch');
-    agregarCards();
+    agregarCards(productosTresRound.articulosMerchandising);
     agregarCardsXParametro();
+
 }
 
 function agregarNavbar(){
@@ -65,17 +66,16 @@ function agregarBarraSecciones(seccion){
         }
     })
 }
-function agregarCards(){
-    $('#sectorAgregarCards').empty();
-    setCriterioOrdenamiento();
-    merch = productosTresRound.articulosMerchandising;
-    for (i=0;i<merch.length;i++){
+function agregarCards(array){
+    $('#sectorAgregarCards').empty();  
+   // merch = productosTresRound.articulosMerchandising;  
+    for (i=0;i<array.length;i++){
          miCard = ' <div class="col-xl-4 col-lg-12">';
          miCard +=' <div class="card text-white mb-3 text-center">';
-         miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
+         miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
          miCard +=' <div class="card-body">';
-         miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> ';        
-         miCard += '<a href="descripcion.html" class="btn btn-secondary">Ver Articulo</a>';
+         miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> ';        
+         miCard += '<button onclick="ruteoADescripcion("'+array[i].id+'")" value="Ver Articulo"></button>';
          miCard += '</div></div></div>';
          $('#sectorAgregarCards').append(miCard);              
         }
@@ -97,22 +97,50 @@ function agregarCardsXParametro(){
             }
         }
     }
-    function ordenarAZ(criterio){
-        merch = productosTresRound.articulosMerchandising;
-        if (criterio == 'de la A a la Z'){
-           merch.sort(ordenarUnParamDesc('nombre'));
-        } else if (criterio == 'de la Z a la A'){
-            merch.sort(ordenarUnParamAsc('nombre'));
-        }
-    }
-    function setCriterioOrdenamiento(){
-        botonDeLaAaLaZ = $('#flexRadioDefault1').prop('checked');
-        botonDeLaZaLaA = $('#flexRadioDefault2').prop('checked');      
-     if (botonDeLaAaLaZ == nombre){
-        ordenarAZ('A z');
-    } else if (botonDeLaZaLaA == nombre){
-       ordenarAZ('Z a');
-    }
+    
+   
+function deLaAaLaZ(){  
+    sortResults('nombre', true);
+    agregarCards(merch);
 }
+function deLaZaLaA(){ 
+    sortResults('nombre', false);
+    agregarCards(merch);
+}
+
+function sortResults(prop, asc) {
+    merch.sort(function(a, b) {
+        if (asc) {
+            return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
+        } else {
+            return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+        }
+    });
+   // renderResults();
+}
+function mostrarProductosDestacados(){
+   
+        $('#sectorAgregarCards').empty();  
+       // merch = productosTresRound.articulosMerchandising;  
+        for (i=0;i<merch.length;i++){
+            if(merch[i].destacado){
+                miCard = ' <div class="col-xl-4 col-lg-12">';
+             miCard +=' <div class="card text-white mb-3 text-center">';
+             miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
+             miCard +=' <div class="card-body">';
+             miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> ';        
+             miCard += '<a href="descripcion.html" class="btn btn-secondary">Ver Articulo</a>';
+             miCard += '</div></div></div>';
+             $('#sectorAgregarCards').append(miCard); 
+            }                                
+        }
+}
+function ruteoADescripcion(id){
+    id_detalleMerchandising=id;
+   // location.href="descripcion.html";
+   console.log(id)
+}
+
+
         
  

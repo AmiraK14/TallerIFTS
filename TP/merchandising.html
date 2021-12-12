@@ -100,42 +100,13 @@
                       </div>
                       <div id= "sectorBarraNavegacion" class="container colorFondoNegro"></div> 
           <div class= "container">
-          <div class="row">
-            <div id="menuSelectCategorias" class="my-3 col-6 offset-3">
-              <select id="selectCategorias" class="form-select" aria-label="Default select example">
-                <option selected id="allmerchadisingOption" value="allmerchadising">Todos los articulos</option>
-                <optgroup label="Por Orden Alfabetico">
-                  <option id="nombre" value="a">De la A a la Z</option>
-                  <option id="nombre" value="BA">De la Z a la A</option>
-                </optgroup>
-                <optgroup label="Mostrar Productos Destacados">
-                    <option id="Destacados" value="Destacados">Productos Destacados</option>                  
-                  </optgroup>                
-              </select>
-            </div>      
+          <div class="row">         
             <div id="checkButtonsContainer">
-                <div class="row">
-                  <div class="col-xl-3 col-lg-6">
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                    <label class="form-check-label" for="flexRadioDefault1" style="color: white;">
-                      De la A a la Z
-                    </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                    <label class="form-check-label" for="flexRadioDefault2" style="color: white;">
-                     De la Z a la A
-                    </label>
-                    </div>
-                    <div class="form-check">
-                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                     <label class="form-check-label" for="flexRadioDefault2" style="color: white;">
-                       Productos Destacados
-                     </label>
-                     </div>
-                  </div>                
-            </div>
+               
+                    <input value= "De la A a la Z" type="button" onclick="deLaAaLaZ()" name="flexRadioDefault" id="flexRadioDefault1">                                                     
+                    <input value=" De la Z a la A"  type="button" onclick="deLaZaLaA()" name="flexRadioDefault" id="flexRadioDefault2">                                
+                    <input value=" Productos Destacados"  type="button" onclick="mostrarProductosDestacados()" name="flexRadioDefault" id="flexRadioDefault2">                  
+
           </div>
         </section>
     <section class="container"> 

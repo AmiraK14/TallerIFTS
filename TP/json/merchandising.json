@@ -10,7 +10,7 @@
         },
         {
             "id":"merch02",
-            "nombre":"Abum Canciones de Noche",         
+            "nombre":"Album Canciones de Noche",         
             "img":"imagenes/merch/imagenCD3round.jpg",
             "seccion":"merchandising.html",
             "precio" : 5000,

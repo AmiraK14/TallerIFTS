@@ -23,6 +23,7 @@ function getParameterByName(name) {
 }
 
 let params = new URLSearchParams(location.search);
+var id_detalleMerchandising;
 
 function validarEmail(email) {
         var re = /\S+@\S+\.\S+/;

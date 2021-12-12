@@ -92,3 +92,9 @@
 .colorFondoNegro {
     background-color: black;
 }
+#checkButtonsContainer{
+    text-align: center;
+}
+#checkButtonsContainer input{
+    background-color: #F07800;
+}

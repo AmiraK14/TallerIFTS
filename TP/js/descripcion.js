@@ -8,8 +8,9 @@ productosTresRound = '';
 request.onload = function(){
     productosTresRound = request.response;
     merch = productosTresRound.articulosMerchandising;
-    console.log(merch)
-    agregarCardsXParametro();
+    console.log(merch);
+    agregarNavbar();   
+    console.log(id_detalleMerchandising);
 }
 
 
@@ -20,7 +21,7 @@ request.onload = function(){
 
 
 
-function agregarCardsXParametro(){
+/*function agregarCardsXParametro(){
     if (getParameterByName('idProducto') != ''){
     for(i=0;i<merch.length;i++){
     if (merch[i].id == getParameterByName('idProducto')){
@@ -36,7 +37,7 @@ function agregarCardsXParametro(){
                 }
             }
         }
-    }
+    }*/
     function agregarNavbar(){
         var miNavBar = '<nav class="navbar navbar-dark bg-dark fixed-top">';
         miNavBar += '<nav class="navbar navbar-dark bg-dark fixed-top">';
