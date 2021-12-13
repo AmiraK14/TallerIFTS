@@ -8,9 +8,9 @@ productosTresRound = '';
 request.onload = function(){
     productosTresRound = request.response;
     merch = productosTresRound.articulosMerchandising;
-    console.log(merch);
     agregarNavbar();   
-    console.log(id_detalleMerchandising);
+    console.log(localStorage.getItem('idDescripcion'));
+    agregarCards(merch);
 }
 
 
@@ -65,18 +65,19 @@ request.onload = function(){
                 
         $('#headerSecciones').append(miNavBar);
     }
-    function agregarCards(){
-        $('#sectorAgregarCards').empty();
-        setCriterioOrdenamiento();
-        merch = productosTresRound.articulosMerchandising;
-        for (i=0;i<merch.length;i++){
-             miCard = ' <div class="col-xl-4 col-lg-12">';
-             miCard +=' <div class="card text-white mb-3 text-center">';
-             miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
-             miCard +=' <div class="card-body">';
-             miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> ';        
-             miCard += '<a href="descripcion.html" class="btn btn-secondary">Ver Articulo</a>';
-             miCard += '</div></div></div>';
-             $('#sectorAgregarCards').append(miCard);              
+ 
+        function agregarCards(array){
+            $('#sectorAgregarCards').empty();           
+            for (i=0;i<array.length;i++){
+                if(localStorage.getItem('idDescripcion')== array[i].id){                
+                    miCard = ' <div class="col-xl-4 col-lg-12">';             
+                    miCard +=' <div class="card text-white mb-3 text-center">';
+                    miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
+                    miCard +=' <div class="card-body">';
+                    miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> '; 
+                    miCard +=' <h5 class="card-title">$'+array[i].precio+' </h5> ';       
+                    miCard += '</div></div></div>';   
+                    $('#sectorAgregarCards').append(miCard);              
+                }
             }
         }

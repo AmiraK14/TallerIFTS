@@ -74,13 +74,13 @@ function agregarCards(array){
         miCard +=' <div class="card text-white mb-3 text-center">';
         miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
         miCard +=' <div class="card-body">';
-        miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> ';        
-        miCard += '<button onclick="ruteoADescripcion("/'+array[i].id+'/")" value="Ver Articulo"></button>';
+        miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> ';       
+        miCard +=' <button onclick="ruteoADescripcion(\''+array[i].id.toString()+'\')" value="Ver Articulo"></button> ';
         miCard += '</div></div></div>';   
          $('#sectorAgregarCards').append(miCard);              
         }
     }
-function agregarCardsXParametro(){
+/*function agregarCardsXParametro(){
     if (getParameterByName('idProducto') != ''){
     for(i=0;i<merch.length;i++){
     if (merch[i].id == getParameterByName('idProducto')){
@@ -96,7 +96,7 @@ function agregarCardsXParametro(){
                 }
             }
         }
-    }
+    }*/
     
    
 function deLaAaLaZ(){  
@@ -137,8 +137,8 @@ function mostrarProductosDestacados(){
 }
 function ruteoADescripcion(id){
     id_detalleMerchandising=id;
-   // location.href="descripcion.html";
-   console.log(id)
+   localStorage.setItem('idDescripcion',id);
+    location.href="descripcion.html";
 }
 
         
