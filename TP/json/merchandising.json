@@ -3,6 +3,7 @@
         {
             "id":"merch01",
             "nombre":"Remera Canciones de Noche",
+            "descripcion":"Remera Tres Round Original, Talle XXL",
             "img":"imagenes/merch/imagenremera3round.jpg",
             "seccion":"merchandising.html",
             "precio" : 4500,
@@ -10,7 +11,8 @@
         },
         {
             "id":"merch02",
-            "nombre":"Album Canciones de Noche",         
+            "nombre":"Album Canciones de Noche",  
+            "descripcion":"Disco Original Canciones de noche con 10 canciones",       
             "img":"imagenes/merch/imagenCD3round.jpg",
             "seccion":"merchandising.html",
             "precio" : 5000,
@@ -19,6 +21,7 @@
         {
             "id":"merch03",
             "nombre":"Pua",
+            "descripcion":"Pua directamente del guitarrista de la banda",
             "img":"imagenes/merch/pua3ROUND.jpg",
             "seccion":"merchandising.html",
             "precio" : 500,
@@ -27,6 +30,7 @@
         {
             "id":"merch04",
             "nombre":"Vaso Cervecero",
+            "descripcion":"Vaso para cerveza de vidrio",
             "img":"imagenes/merch/vasoCervecero3ROUND.jpg",
             "seccion":"merchandising.html",
             "precio" : 1500,
@@ -35,6 +39,7 @@
         {
             "id":"merch05",
             "nombre":"Taza Original 3 Round",
+            "descripcion":"Primera taza sacada por la banda con el logo Original de Canciones de Noche",
             "img":"imagenes/merch/taza3ROUND.jpg",
             "seccion":"merchandising.html",
             "precio" : 1500,
@@ -42,7 +47,8 @@
         },
         {
             "id":"merch06",
-            "nombre":"Taza 3 Round Logo Estrella",           
+            "nombre":"Taza 3 Round Logo Estrella",
+            "descripcion":"Segunda Taza diseñada con el Logo de Estrella" ,          
             "img":"imagenes/merch/tazaDistintoModelo3ROUND.jpg",
             "seccion":"merchandising.html",
             "precio" : 1500,
