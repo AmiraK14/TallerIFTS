@@ -118,6 +118,3 @@ function ruteoADescripcion(id){
    localStorage.setItem('idDescripcion',id);
     location.href="descripcion.html";
 }
-
-        
- 
