@@ -11,8 +11,8 @@ request.onload = function(){
     console.log(merch);
     agregarNavbar(); 
     agregarBarraSecciones('merch');
-    agregarCards(productosTresRound.articulosMerchandising);
-    agregarCardsXParametro();
+    agregarCards(merch);
+    //agregarCardsXParametro();
 
 }
 
@@ -70,13 +70,13 @@ function agregarCards(array){
     $('#sectorAgregarCards').empty();  
    // merch = productosTresRound.articulosMerchandising;  
     for (i=0;i<array.length;i++){
-         miCard = ' <div class="col-xl-4 col-lg-12">';
-         miCard +=' <div class="card text-white mb-3 text-center">';
-         miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
-         miCard +=' <div class="card-body">';
-         miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> ';        
-         miCard += '<button onclick="ruteoADescripcion("'+array[i].id+'")" value="Ver Articulo"></button>';
-         miCard += '</div></div></div>';
+        miCard = ' <div class="col-xl-4 col-lg-12">';             
+        miCard +=' <div class="card text-white mb-3 text-center">';
+        miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
+        miCard +=' <div class="card-body">';
+        miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> ';        
+        miCard += '<button onclick="ruteoADescripcion("/'+array[i].id+'/")" value="Ver Articulo"></button>';
+        miCard += '</div></div></div>';   
          $('#sectorAgregarCards').append(miCard);              
         }
     }
@@ -85,15 +85,13 @@ function agregarCardsXParametro(){
     for(i=0;i<merch.length;i++){
     if (merch[i].id == getParameterByName('idProducto')){
     $('#sectorAgregarCards').empty();
-         miCard = ' <div class="col-xl-4 col-lg-12">';
-         miCard +=' <form action="merchandising.html" method="get" >';
-         miCard +=' <input type="hidden" name="idProducto" value="'+merch[i].id+'"></div>'
+         miCard = ' <div class="col-xl-4 col-lg-12">';             
          miCard +=' <div class="card text-white mb-3 text-center">';
          miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
          miCard +=' <div class="card-body">';
          miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> ';        
-         miCard += '<a href="descripcion.html" class="btn btn-secondary">Ver Articulo</a>';
-         miCard += '</form></div></div></div>';              
+         miCard +=' <button onclick="ruteoADescripcion(\''+array[i].id.toString()+'\')" value="Ver Articulo"></button> ';
+         miCard += '</div></div></div>';              
         $('#sectorAgregarCards').append(miCard);
                 }
             }
@@ -142,7 +140,6 @@ function ruteoADescripcion(id){
    // location.href="descripcion.html";
    console.log(id)
 }
-
 
         
  
