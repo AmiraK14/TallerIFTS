@@ -75,7 +75,8 @@ request.onload = function(){
                     miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
                     miCard +=' <div class="card-body">';
                     miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> '; 
-                    miCard +=' <h5 class="card-title">$'+array[i].precio+' </h5> ';       
+                    miCard +=' <h5 class="card-title">$'+array[i].precio+' </h5> '; 
+                    miCard +=' <button type="submit">Comprar</button> ';       
                     miCard += '</div></div></div>';   
                     $('#sectorAgregarCards').append(miCard);              
                 }
