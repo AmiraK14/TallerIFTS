@@ -75,7 +75,7 @@ function agregarCards(array){
         miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
         miCard +=' <div class="card-body">';
         miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> ';       
-        miCard +=' <button onclick="ruteoADescripcion(\''+array[i].id.toString()+'\')" value="Ver Articulo"></button> ';
+        miCard +=' <button onclick="ruteoADescripcion(\''+array[i].id.toString()+'\')" >Ver Articulo</button> ';
         miCard += '</div></div></div>';   
          $('#sectorAgregarCards').append(miCard);              
         }
