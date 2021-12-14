@@ -11,7 +11,7 @@ request.onload = function(){
     agregarNavbar();   
     console.log(localStorage.getItem('idDescripcion'));
     agregarCards(merch);
-    agregarCardsXParametro();
+    agregarCardsXParametro(merch);
     llamarModalCompleto();
 }
 
@@ -43,7 +43,7 @@ request.onload = function(){
         $('#headerSecciones').append(miNavBar);
     }
  
-        function agregarCards(array){
+      function agregarCards(array){
             $('#sectorAgregarCards').empty();           
             for (i=0;i<array.length;i++){
                 if(localStorage.getItem('idDescripcion')== array[i].id){                
@@ -75,3 +75,24 @@ request.onload = function(){
             $('#modalsSection').append();
           
         }
+        function agregarCardsXParametro(){
+            if (getParameterByName('idProducto') != ''){
+                for(i=0;i<merch.length;i++){
+                    if (merch[i].id == getParameterByName('idProducto')){
+                        $('#sectorAgregarCards').empty();
+                        miCard = ' <div class="col-xl-4 col-lg-12">';
+                        miCard +=' <div class="card text-white mb-3 text-center">';
+                        miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
+                        miCard +=' <form method="get" action="descripcion.html"><div class="card-body">';
+                        miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> '; 
+                        miCard += '<input type="hidden" value="'+merch[i].id+'" name="idProducto">' 
+                        miCard += '<input type="hidden" value="'+merch[i].precio+'" name="idProducto">'   
+                        miCard += '<input type="hidden" value="'+merch[i].descripcion+'" name="idProducto">'   
+                        miCard += '<button type="submit" class="btn btn-secondary btn-sm">Comprar</button>';                                              
+                        miCard += '</div></form></div></div>';
+                        $('#sectorAgregarCards').append(miCard);
+                    }
+                }
+            }
+        }
+        //if (merch[i].id == getParameterByName('idProducto')){
