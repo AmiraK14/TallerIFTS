@@ -11,7 +11,7 @@ request.onload = function(){
     agregarNavbar();   
     console.log(localStorage.getItem('idDescripcion'));
     agregarCards(merch);
-    agregarCardsXParametro(array);
+    //agregarCardsXParametro(array);
     llamarModalCompleto();
 }
 
@@ -75,7 +75,7 @@ request.onload = function(){
             $('#modalsSection').append();
           
         }
-        function agregarCardsXParametro(){
+       /* function agregarCardsXParametro(){
             if (getParameterByName('idProducto') != ''){
                 for(i=0;i<merch.length;i++){
                     if (merch[i].id == getParameterByName('idProducto')){
@@ -94,7 +94,7 @@ request.onload = function(){
                     }
                 }
             }
-        }
+        }*/
         function agregarCards(array){
             $('#sectorAgregarCards').empty();           
             for(i=0;i<merch.length;i++){
