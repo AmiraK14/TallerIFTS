@@ -12,6 +12,7 @@ request.onload = function(){
     agregarNavbar(); 
     agregarBarraSecciones('merch');
     agregarCards(merch);  
+    agregarCardsXParametro();
 }
 
 function agregarNavbar(){
@@ -64,7 +65,7 @@ function agregarBarraSecciones(seccion){
         }
     })
 }
-function agregarCards(array){
+/*function agregarCards(array){
     $('#sectorAgregarCards').empty();  
     for (i=0;i<array.length;i++){
         miCard = ' <div class="col-xl-4 col-lg-12">';             
@@ -76,7 +77,7 @@ function agregarCards(array){
         miCard += '</div></div></div>';   
          $('#sectorAgregarCards').append(miCard);              
         }
-    } 
+    } */
 function deLaAaLaZ(){  
     sortResults('nombre', true);
     agregarCards(merch);
@@ -118,3 +119,36 @@ function ruteoADescripcion(id){
    localStorage.setItem('idDescripcion',id);
     location.href="descripcion.html";
 }
+function agregarCards(array){
+    $('#sectorAgregarCards').empty();  
+   // merch = productosTresRound.articulosMerchandising;  
+    for (i=0;i<array.length;i++){
+         miCard = ' <div class="col-xl-4 col-lg-12">';
+         miCard +=' <div class="card text-white mb-3 text-center">';
+         miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
+         miCard +=' <form method="get" action="descripcion.html"><div class="card-body">';
+         miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> '; 
+         miCard += '<input type="hidden" value="'+array[i].id+'" name="idProducto">'       
+         miCard += '<button type="submit" class="btn btn-secondary btn-sm">Ver producto</button>';
+         miCard += '</div></form></div></div>';
+         $('#sectorAgregarCards').append(miCard);              
+        }
+    }
+    function agregarCardsXParametro(){
+        if (getParameterByName('idProducto') != ''){
+            for(i=0;i<merch.length;i++){
+                if (merch[i].id == getParameterByName('idProducto')){
+                    $('#sectorAgregarCards').empty();
+                    miCard = ' <div class="col-xl-4 col-lg-12">';
+                    miCard +=' <div class="card text-white mb-3 text-center">';
+                    miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
+                    miCard +=' <form method="get" action="descripcion.html"><div class="card-body">';
+                    miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> '; 
+                    miCard += '<input type="hidden" value="'+merch[i].id+'" name="idProducto">'       
+                    miCard += '<button type="submit" class="btn btn-secondary btn-sm">Ver producto</button>';
+                     miCard += '</div></form></div></div>';
+                    $('#sectorAgregarCards').append(miCard);
+                }
+            }
+        }
+    }
