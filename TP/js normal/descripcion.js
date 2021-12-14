@@ -11,7 +11,7 @@ request.onload = function(){
     agregarNavbar();   
     console.log(localStorage.getItem('idDescripcion'));
     agregarCards(merch);
-    agregarCardsXParametro(merch);
+    agregarCardsXParametro(array);
     llamarModalCompleto();
 }
 
@@ -43,7 +43,7 @@ request.onload = function(){
         $('#headerSecciones').append(miNavBar);
     }
  
-      function agregarCards(array){
+     /* function agregarCards(array){
             $('#sectorAgregarCards').empty();           
             for (i=0;i<array.length;i++){
                 if(localStorage.getItem('idDescripcion')== array[i].id){                
@@ -59,7 +59,7 @@ request.onload = function(){
                     $('#sectorAgregarCards').append(miCard);              
                 }
             }
-        }
+        }*/
         function llamarModalCompleto(){         
             miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
             miModal += '<div class="modal-dialog">'
@@ -92,6 +92,23 @@ request.onload = function(){
                         miCard += '</div></form></div></div>';
                         $('#sectorAgregarCards').append(miCard);
                     }
+                }
+            }
+        }
+        function agregarCards(array){
+            $('#sectorAgregarCards').empty();           
+            for(i=0;i<merch.length;i++){
+                if (merch[i].id == getParameterByName('idProducto')){               
+                    miCard = ' <div class="col-xl-4 col-lg-12">';             
+                    miCard +=' <div class="card text-white mb-3 text-center">';
+                    miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
+                    miCard +=' <div class="card-body">';
+                    miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> '; 
+                    miCard +=' <h5 class="card-title">$'+array[i].precio+' </h5> '; 
+                    miCard +=' <h5 class="card-title">'+array[i].descripcion+' </h5> '; 
+                    miCard +=' <button type="button">Comprar</button> ';       
+                    miCard += '</div></div></div>';   
+                    $('#sectorAgregarCards').append(miCard);              
                 }
             }
         }
