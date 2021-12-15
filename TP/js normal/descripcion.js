@@ -79,10 +79,10 @@ request.onload = function(){
             miModal += '<div class="modal-dialog">'
             miModal += '<div class="modal-content">'
             miModal += '<div class="modal-header">'
-            miModal += '<h5 class="modal-title">Envio exitoso</h5>'
+            miModal += '<h5 class="modal-title">ENVIO EXITOSO</h5>'
             miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
             miModal += '<div class="modal-body">'
-           // miModal += '<p><strong>'+mail+'</strong> su comentario ha sido enviado</p></div>'
+            miModal += '<p> Su comentario ha sido enviado correctamente</p></div>'
             miModal += '<div class="modal-footer">'
             miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
             miModal += '</div></div></div></div>'
@@ -93,19 +93,7 @@ request.onload = function(){
                 $('#modalCompleto').hide();
             })
         }
-        function llamarModalCompra(){   
-            /* miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
-             miModal += '<div class="modal-dialog">'
-             miModal += '<div class="modal-content">'
-             miModal += '<div class="modal-header">'
-             miModal += '<h5 class="modal-title">Envio exitoso</h5>'
-             miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
-             miModal += '<div class="modal-body">'
-             miModal += '<p> su comentario ha sido enviado</p></div>'
-             miModal += '<div class="modal-footer">'
-             miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
-             miModal += '</div></div></div></div>'
-             $('#modalsSection').append();*/
+        function llamarModalCompra(){             
              $('#modalsSection').empty();
              miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
              miModal += '<div class="modal-dialog">'
@@ -113,8 +101,7 @@ request.onload = function(){
              miModal += '<div class="modal-header">'
              miModal += '<h5 class="modal-title">COMPRA EXITOSA</h5>'
              miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
-             miModal += '<div class="modal-body">'
-            // miModal += '<p><strong>'+mail+'</strong> su comentario ha sido enviado</p></div>'
+             miModal += '<div class="modal-body">'         
              miModal += '<div class="modal-footer">'
              miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
              miModal += '</div></div></div></div>'
