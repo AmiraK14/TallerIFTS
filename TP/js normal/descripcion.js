@@ -93,6 +93,39 @@ request.onload = function(){
                 $('#modalCompleto').hide();
             })
         }
+        function llamarModalCompra(){   
+            /* miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
+             miModal += '<div class="modal-dialog">'
+             miModal += '<div class="modal-content">'
+             miModal += '<div class="modal-header">'
+             miModal += '<h5 class="modal-title">Envio exitoso</h5>'
+             miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
+             miModal += '<div class="modal-body">'
+             miModal += '<p> su comentario ha sido enviado</p></div>'
+             miModal += '<div class="modal-footer">'
+             miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
+             miModal += '</div></div></div></div>'
+             $('#modalsSection').append();*/
+             $('#modalsSection').empty();
+             miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
+             miModal += '<div class="modal-dialog">'
+             miModal += '<div class="modal-content">'
+             miModal += '<div class="modal-header">'
+             miModal += '<h5 class="modal-title">COMPRA EXITOSA</h5>'
+             miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
+             miModal += '<div class="modal-body">'
+            // miModal += '<p><strong>'+mail+'</strong> su comentario ha sido enviado</p></div>'
+             miModal += '<div class="modal-footer">'
+             miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
+             miModal += '</div></div></div></div>'
+             console.log(miModal); 
+             $('#modalsSectionCompra').append(miModal);
+             $('#modalCompleto').show();
+             $('.botonCerrarModal').click(function(){
+                 $('#modalCompleto').hide();
+             })
+         }
+         
         
       
        /* function agregarCardsXParametro(){
@@ -126,7 +159,7 @@ request.onload = function(){
                     miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> '; 
                     miCard +=' <h5 class="card-title">$'+array[i].precio+' </h5> '; 
                     miCard +=' <h5 class="card-title">'+array[i].descripcion+' </h5> '; 
-                    miCard +=' <button type="button" onclick="llamarModalCompleto();">Comprar</button> ';       
+                    miCard +=' <button type="button" onclick="llamarModalCompra();">Comprar</button> ';       
                     miCard += '</div></div></div>';   
                     $('#sectorAgregarCards').append(miCard);              
                 }
