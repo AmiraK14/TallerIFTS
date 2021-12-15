@@ -1,14 +1,6 @@
+agregarNavbar();
 abrirModal();
 cerrarModal();
-
-
-/* function enviarDatos() {
-    $('#botonEnviar').click(function() {
-        validarDatos;
-    })
-
-
-*/
 
 function abrirModal() {
     $('#botonEnviar').click(function() {
