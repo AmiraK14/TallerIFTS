@@ -138,3 +138,8 @@ background-position: right;
 .offcanvas-end {
     width:250px;
 }
+.modal-header, .modal-body, .modal-footer {
+    background-color: #141619;
+    border: blanchedalmond 1px solid;
+    color: blanchedalmond;
+}

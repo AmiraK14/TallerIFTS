@@ -10,9 +10,7 @@ request.onload = function(){
     merch = productosTresRound.articulosMerchandising;
     agregarNavbar();   
     console.log(localStorage.getItem('idDescripcion'));
-    agregarCards(merch);
-    //agregarCardsXParametro(array);
-    llamarModalCompleto();
+    agregarCards(merch); 
 }
 
     function agregarNavbar(){
@@ -41,60 +39,46 @@ request.onload = function(){
         miNavBar += '</ul></div></div></div></nav>'
                 
         $('#headerSecciones').append(miNavBar);
-    }
- 
-     /* function agregarCards(array){
-            $('#sectorAgregarCards').empty();           
-            for (i=0;i<array.length;i++){
-                if(localStorage.getItem('idDescripcion')== array[i].id){                
-                    miCard = ' <div class="col-xl-4 col-lg-12">';             
-                    miCard +=' <div class="card text-white mb-3 text-center">';
-                    miCard +=' <img src="'+array[i].img+' " class="card-img-top"> ';
-                    miCard +=' <div class="card-body">';
-                    miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> '; 
-                    miCard +=' <h5 class="card-title">$'+array[i].precio+' </h5> '; 
-                    miCard +=' <h5 class="card-title">'+array[i].descripcion+' </h5> '; 
-                    miCard +=' <button type="submit">Comprar</button> ';       
-                    miCard += '</div></div></div>';   
-                    $('#sectorAgregarCards').append(miCard);              
-                }
-            }
-        }*/
-        function llamarModalCompleto(){         
+    }   
+        function llamarModal(){            
+            $('#modalsSection').empty();
             miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
             miModal += '<div class="modal-dialog">'
             miModal += '<div class="modal-content">'
             miModal += '<div class="modal-header">'
-            miModal += '<h5 class="modal-title">Envio exitoso</h5>'
+            miModal += '<h5 class="modal-title">ENVIO EXITOSO</h5>'
             miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
             miModal += '<div class="modal-body">'
-            miModal += '<p>s su comentario ha sido enviado</p></div>'
+            miModal += '<p> Su comentario ha sido enviado correctamente</p></div>'
             miModal += '<div class="modal-footer">'
             miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
             miModal += '</div></div></div></div>'
-            $('#modalsSection').append();
-          
+            console.log(miModal); 
+            $('#modalsSection').append(miModal);
+            $('#modalCompleto').show();
+            $('.botonCerrarModal').click(function(){
+                $('#modalCompleto').hide();
+            })
         }
-       /* function agregarCardsXParametro(){
-            if (getParameterByName('idProducto') != ''){
-                for(i=0;i<merch.length;i++){
-                    if (merch[i].id == getParameterByName('idProducto')){
-                        $('#sectorAgregarCards').empty();
-                        miCard = ' <div class="col-xl-4 col-lg-12">';
-                        miCard +=' <div class="card text-white mb-3 text-center">';
-                        miCard +=' <img src="'+merch[i].img+' " class="card-img-top"> ';
-                        miCard +=' <form method="get" action="descripcion.html"><div class="card-body">';
-                        miCard +=' <h5 class="card-title">'+merch[i].nombre+' </h5> '; 
-                        miCard += '<input type="hidden" value="'+merch[i].id+'" name="idProducto">' 
-                        miCard += '<input type="hidden" value="'+merch[i].precio+'" name="idProducto">'   
-                        miCard += '<input type="hidden" value="'+merch[i].descripcion+'" name="idProducto">'   
-                        miCard += '<button type="submit" class="btn btn-secondary btn-sm">Comprar</button>';                                              
-                        miCard += '</div></form></div></div>';
-                        $('#sectorAgregarCards').append(miCard);
-                    }
-                }
-            }
-        }*/
+        function llamarModalCompra(){             
+             $('#modalsSection').empty();
+             miModal = '<div id="modalCompleto" class="modal" tabindex="-1">'
+             miModal += '<div class="modal-dialog">'
+             miModal += '<div class="modal-content">'
+             miModal += '<div class="modal-header">'
+             miModal += '<h5 class="modal-title">COMPRA EXITOSA</h5>'
+             miModal += '<button type="button" class="btn-close botonCerrarModal" data-bs-dismiss="modal" aria-label="Close"></button></div>'
+             miModal += '<div class="modal-body">'         
+             miModal += '<div class="modal-footer">'
+             miModal += '<button type="button" class="btn btn-secondary botonCerrarModal" data-bs-dismiss="modal">Cerrar</button>'
+             miModal += '</div></div></div></div>'
+             console.log(miModal); 
+             $('#modalsSectionCompra').append(miModal);
+             $('#modalCompleto').show();
+             $('.botonCerrarModal').click(function(){
+                 $('#modalCompleto').hide();
+             })
+         }                     
         function agregarCards(array){
             $('#sectorAgregarCards').empty();           
             for(i=0;i<merch.length;i++){
@@ -106,10 +90,9 @@ request.onload = function(){
                     miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> '; 
                     miCard +=' <h5 class="card-title">$'+array[i].precio+' </h5> '; 
                     miCard +=' <h5 class="card-title">'+array[i].descripcion+' </h5> '; 
-                    miCard +=' <button type="button">Comprar</button> ';       
+                    miCard +=' <button type="button" onclick="llamarModalCompra();">Comprar</button> ';       
                     miCard += '</div></div></div>';   
                     $('#sectorAgregarCards').append(miCard);              
                 }
             }
-        }
-        //if (merch[i].id == getParameterByName('idProducto')){
+        }      
