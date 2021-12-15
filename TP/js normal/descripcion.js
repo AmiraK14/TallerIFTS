@@ -13,6 +13,7 @@ request.onload = function(){
     agregarCards(merch);
     //agregarCardsXParametro(array);
     llamarModalCompleto();
+    llamarModalCompletoDeCompra();
 }
 
     function agregarNavbar(){
@@ -75,6 +76,7 @@ request.onload = function(){
             $('#modalsSection').append();
           
         }
+        
        /* function agregarCardsXParametro(){
             if (getParameterByName('idProducto') != ''){
                 for(i=0;i<merch.length;i++){
@@ -106,7 +108,7 @@ request.onload = function(){
                     miCard +=' <h5 class="card-title">'+array[i].nombre+' </h5> '; 
                     miCard +=' <h5 class="card-title">$'+array[i].precio+' </h5> '; 
                     miCard +=' <h5 class="card-title">'+array[i].descripcion+' </h5> '; 
-                    miCard +=' <button type="button">Comprar</button> ';       
+                    miCard +=' <button type="button" onclick="llamarModalCompleto();">Comprar</button> ';       
                     miCard += '</div></div></div>';   
                     $('#sectorAgregarCards').append(miCard);              
                 }
